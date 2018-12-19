@@ -1,0 +1,148 @@
+@import "../../components/tabBar/tabBar.wxss";
+
+.container .user_info {
+  background: #24303c;
+  padding: 30rpx 30rpx 40rpx 30rpx;
+}
+
+.container .user_info .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  border: 4rpx solid #fff;
+}
+
+.container .user_info .head_inof {
+  margin-left: 30rpx;
+}
+
+.container .user_info .head_inof .phone_num {
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.container .user_info .head_inof .data {
+  color: #bbb;
+  font-size: 24rpx;
+}
+
+.arrow {
+  margin-right: 0rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.container .func_view {
+  height: 432rpx;
+}
+
+.container .func_view {
+  height: 432rpx;
+  background: #fff;
+  box-shadow: 0 10rpx 10rpx #f4f8f9;
+}
+
+.container .cell_view {
+  height: 108rpx;
+  padding: 0 30rpx;
+  position: relative;
+}
+
+.container .cell_view_noline {
+  height: 108rpx;
+  padding: 0 30rpx;
+}
+
+.container .cell_view::before {
+  content:" ";
+  position:absolute;
+  left:30rpx;
+  bottom:0;
+  right:30rpx;
+  height:1px;
+  background: #eee;
+}
+
+.container .cell_view image{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.container .cell_view_noline image{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.func_title {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 18rpx;
+}
+
+.func_des {
+  color: #999;
+  font-size: 24rpx;
+  margin-right: 2rpx;
+}
+
+.func_des_price {
+  color: #f5a000;
+  font-size: 24rpx;
+  margin-right: 2rpx;
+}
+
+.share_view , .qrcode_view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:rgba(0,0,0,0.5) ;
+  z-index: 1000;
+}
+
+.share_view .share_func {
+  background: #fff;
+  height: 200rpx;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0;
+  right: 0;
+  transform: bottom 1.5s;
+}
+
+.share_view .share_func .wx_friend {
+  font-size: 24rpx;
+}
+
+.share_view .share_func .wx_friend image{
+  width: 90rpx;
+  height: 90rpx;
+  margin: 40rpx 0 10rpx 0;
+}
+
+.black_view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0rpx;
+}
+
+.qrcode_view .qrcode image {
+  width: 400rpx;
+  height: 400rpx;
+  background: #fff;
+}
+
+.qrcode_view .qrcode .upload {
+  background: #fff;
+  font-size: 28rpx;
+  border-radius: 10rpx;
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-indent: 100rpx;
+  margin-top: 60rpx;
+}

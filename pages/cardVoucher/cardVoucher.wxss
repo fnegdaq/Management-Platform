@@ -1,0 +1,184 @@
+/* pages/cardVoucher/cardVoucher.wxss */
+
+.colorBlue {
+  color: #00aeff;
+}
+
+.colorGray{
+  color:#bbb;
+}
+
+.main{
+  height:100%;
+  position:relative;
+}
+
+.tabBar{
+  height:90rpx;
+  background:#fff;
+  line-height:90rpx;
+  display:flex;
+  justify-content: space-around;
+  padding:0 50rpx;
+}
+
+.tabBar view{
+  font-size:32rpx;
+  font-weight:bold;
+  color:#333;
+}
+
+.tabBar .active{
+  border-bottom:4rpx solid #00AEFF;
+}
+
+.noContent{
+  margin-top:232rpx;
+  text-align:center;
+}
+
+.noContent image{
+  width:380rpx;
+  height:380rpx;
+}
+
+.noContent view{
+  margin-top:30rpx;
+  font-size:28rpx;
+  color:#999;
+}
+
+.content{
+  padding:0 20rpx 98rpx 20rpx;
+}
+
+.content .cardLists{
+  height:218rpx;
+
+  /* box-shadow:3rpx 3rpx 10rpx rgba(0,0,0,0.3); */
+  position:relative;
+}
+
+.content .cardLists image{
+  width:100%;
+  height:100%;
+}
+
+.content .cardLists .particulars{
+  padding: 10rpx 10rpx;
+  width:89%;
+  position:absolute;
+  top:20rpx;
+  left:30rpx;
+  font-size:24rpx;
+}
+
+.content .cardLists .particulars .head{
+  font-size:32rpx;
+  font-weight:bold;
+  color:#333;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.particulars .numMethod{
+  display:flex;
+  justify-content: space-between;
+  margin-top:15rpx;
+}
+
+.particulars .numMethod .num .lines{
+  display:inline-block;
+  width:42rpx;
+}
+
+.particulars .numMethod .method text,.particulars .dateDetail .date text{
+  color:#888;
+}
+
+.particulars .dateDetail{
+  display:flex;
+  justify-content: space-between;
+  margin-top:10rpx;
+}
+
+.particulars .dateDetail image{
+  width:68rpx;
+  height:30rpx;
+  margin-top:5rpx;
+}
+
+.editDele{
+  width:150rpx;
+  height:184rpx;
+  background:#4B4C4C;
+  border-radius:18rpx;
+  font-size:26rpx;
+  font-weight:bold;
+  color:#fff;
+  position:absolute;
+  top:188rpx;
+  right:30rpx;
+  z-index:10;  
+}
+
+.editDele .img{
+  width:30rpx;
+  height:12rpx;
+  position:absolute;
+  right:-20rpx;
+  top:-28rpx;
+}
+
+.editDele .img image{
+  width:30rpx;
+  height:12rpx;
+}
+
+.editDele view{
+  padding:0 45rpx;
+}
+
+.editDele .edit{
+  padding-top:35rpx;
+  padding-bottom:25rpx;
+  border-bottom:2rpx solid #737373;
+  text-align: center;
+}
+
+.editDele .del{
+  padding:25rpx 45rpx;
+  text-align: center;
+}
+
+.addCard{
+  width:100%; 
+  height:98rpx;
+  background:#fff;
+  border-top:2rpx solid #eee;
+  padding:0 40rpx;
+   position:fixed;
+  bottom:0;
+  left:0; 
+}
+
+.addCard view{
+  width:670rpx; 
+  height:66rpx; 
+  background:#00aeff;
+  font-size:32rpx;
+  color:#fff;
+  text-align:center;
+  line-height:66rpx;
+  border-radius:18rpx;
+  margin-top:18rpx;
+}
+
+.hidden{
+  display:none;
+}
+.show{
+  display:block;
+}
+

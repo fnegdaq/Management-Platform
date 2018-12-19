@@ -1,0 +1,26 @@
+
+<view class="login_view">
+  <!--wx:if="{{hideHeader == false}} " -->
+  <view class="header_view" style="top:-{{hideHeader == true ? 470 : 0}}rpx;height:{{hideHeader == true ?  0 : 470}}rpx">
+    <image class="bg" src="/images/bg.png" mode="aspectFill"></image>
+    <image class="logo"></image>
+  </view>
+  <view class="login_area">
+
+    <view class="title1">账号<text wx:if="{{accountSuccess==false}}">请输入正确的手机号/邮箱号</text></view>
+    <view class="input_area flex-row flex-y-center" style="border-bottom: 1rpx solid {{focusName == true ? '#31beff' : '#ededed'}};">
+      <input class="flex-grow-1" bindinput="inputName" bindfocus="beFocus" placeholder="请输入手机号/邮箱号" placeholder-class="placeholder" confirm-type="next" data-type="name" value="{{account}}"></input>
+      <image class="flex-grow-0" src="/images/icon_delete.png" wx:if="{{account.length>0 && focusName == true}}" bindtap="deleteName"></image>
+    </view>
+
+    <view class="title2">密码<text wx:if="{{passwordSuccess==false}}">密码错误</text></view>
+    <view class="input_area flex-row flex-y-center" style="border-bottom: 1rpx solid {{focusPW == true ? '#31beff' : '#ededed'}};">
+      <input class="flex-grow-1" bindinput="inputPassword" bindfocus="beFocus" placeholder="请输入密码" placeholder-class="placeholder" password="{{!isShowPW}}" confirm-type="done" data-type="password" value="{{password}}"></input>
+      <image class="flex-grow-0" src="/images/icon_delete.png" style="margin-right:10rpx" wx:if="{{password.length>0 && focusPW == true}}" bindtap="deletePw"></image>
+      <image class="flex-grow-0" src="{{isShowPW == true ? '/images/icon_display.png' : '/images/icon_hidden.png'}}" bindtap="showPassword" wx:if="{{password.length>0 && focusPW == true}}"></image>
+    </view>
+
+    <view class="forget_pw" bindtap="forgetPassword">忘记密码</view>
+  </view>
+  <view class="login_button" bindtap="login">登录</view>
+</view>

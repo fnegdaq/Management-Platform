@@ -1,0 +1,37 @@
+/* pages/withdrawalRecord/withdrawalRecord.wxss */
+
+.record_View {
+  background: #fff;
+  box-shadow: 0 10rpx 10rpx #f4f8f9;
+  margin-bottom: 20rpx;
+}
+
+.listView {
+  background: #fff;
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  border-top: 1rpx solid #eee;
+}
+
+.list_money {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.list_money text {
+  margin-left: 20rpx;
+  color: #f5a000;
+  font-size: 28rpx;
+}
+
+.list_time {
+  color: #999;
+  font-size: 24rpx;
+}
+
+.list_bottom {
+  margin-top: 10rpx;
+  color: #666;
+  font-size: 24rpx;
+}

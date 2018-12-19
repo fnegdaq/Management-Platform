@@ -1,0 +1,113 @@
+/* pages/editdetails/editdetails.wxss */
+.ll_d{
+  width: 100%;
+  height: 130rpx;
+}
+.ll_titles{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #999999;
+  font-size: 28rpx;
+  margin-top: 82%;
+  display: none;
+}
+
+
+
+
+
+
+.ll_foots{
+  width: 100%;
+  height: 98rpx;
+  background-color: #fff;
+  border-top: 1px solid #eeeeee;
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  display: -webkit-box;
+  flex-direction: row;
+}
+.ll_addbutton{
+  width: 432rpx;
+  height: 66rpx;
+  background-color: #28bafe;
+  border-radius: 12rpx;
+  margin-left: 40rpx;
+  margin-top: 17rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  flex-direction: row;
+}
+.ll_addbtnimg{
+  width: 216rpx;
+  height: 66rpx;
+  background-color: #4ac4fc;
+  text-align: center;
+  line-height: 66rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.ll_addbtntext{
+  width: 216rpx;
+  height: 66rpx;
+  text-align: center;
+  line-height: 66rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+.ll_preservation{
+  width: 206rpx;
+  height: 66rpx;
+  background-color: #28bafe;
+  border-radius: 12rpx;
+  margin-left: 30rpx;
+  margin-top: 17rpx;
+  text-align: center;
+  line-height: 66rpx;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.ll_boximg{
+  width: 750rpx;
+  height: 490rpx;
+  box-shadow: 3rpx 3rpx 3rpx 4rpx #eeeeee;
+  position: relative;
+  
+}
+.ll_showimages{
+  width: 690rpx;
+  height: 420rpx;
+  margin-left: 32rpx;
+  margin-top: 35rpx;
+}
+.ll_close{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}
+
+.ll_texts{
+  width: 750rpx;
+  height: 400rpx;
+  box-shadow: 3rpx 3rpx 3rpx 4rpx #eeeeee;
+  position: relative;
+}
+.ll_textarea{
+  width: 640rpx;
+  height: 360rpx;
+  margin-left: 35rpx;
+  padding-top: 20rpx;
+}
+.ll_close2{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+}

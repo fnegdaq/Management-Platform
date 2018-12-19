@@ -1,0 +1,150 @@
+<!--pages/statistics/statistics.wxml-->
+
+<view class="main">
+
+  <view class="tabHeader">
+    <view class="{{day==0?'active':''}}" data-id="0" bindtap='dayTap'>日
+      <text></text>
+    </view>
+    <view class="{{day==1?'active':''}}" data-id="1" bindtap='dayTap'>周
+      <text></text>
+    </view>
+    <view class="{{day==2?'active':''}}" data-id="2" bindtap='dayTap'>月
+      <text></text>
+    </view>
+  </view>
+
+  <view class="date" wx:if="{{day==0}}">
+    <view class="date_time">
+      <image bindtap='dayPrev' src='{{narrowIcon?"/images/datastatistics_icon_previous_highlight.png":"/images/datastatistics_icon_previous_normal.png"}}'></image>
+      <text>{{date}}</text>
+      <image bindtap='dayNext' src='{{narrowIcon2?"/images/datastatistics_icon_next_normal.png":"/images/datastatistics_icon_next_highlight.png"}}'></image>
+    </view>
+  </view>
+
+  <view class="date" wx:if="{{day==1}}">
+    <view class="date_time">
+      <image bindtap='weekPrev' src='{{narrowIcon?"/images/datastatistics_icon_previous_highlight.png":"/images/datastatistics_icon_previous_normal.png"}}'></image>
+      <text>{{startDate}}-{{endDate}}</text>
+      <image bindtap='weekNext' src='{{narrowIcon2?"/images/datastatistics_icon_next_normal.png":"/images/datastatistics_icon_next_highlight.png"}}'></image>
+    </view>
+  </view>
+
+  <view class="date" wx:if="{{day==2}}">
+    <view class="date_time">
+      <image bindtap='monthPrev' src='{{narrowIcon?"/images/datastatistics_icon_previous_highlight.png":"/images/datastatistics_icon_previous_normal.png"}}'></image>
+      <text>{{monthDate}}</text>
+      <image bindtap='monthNext' src='{{narrowIcon2?"/images/datastatistics_icon_next_normal.png":"/images/datastatistics_icon_next_highlight.png"}}'></image>
+    </view>
+  </view>
+
+  <view class='business'>
+    <view class='head'>
+      <view class='title'>营业概况分析</view>
+      <view class='detail' bindtap='moneyDetail'>款项明细</view>
+    </view>
+    <view class="baseBox">
+      <view class="base">
+        <view>
+          <text class="colorOrange">{{pay_money}}</text>收款金额（元）</view>
+        <text class='line'></text>
+        <view>
+          <text class="colorOrange">{{pay_person}}</text>付款人数</view>
+        <text class='line'></text>
+        <view>
+          <text class="colorOrange">{{avg_price}}</text>均客单价（元）</view>
+        <view>
+          <text class="colorGreen">{{conversion}}</text>购买转化率</view>
+        <text class='line'></text>
+        <view>
+          <text class="colorBlue">{{order_num}}</text>总订单数量</view>
+        <text class='line'></text>
+        <view>
+          <text class="colorBlue">{{pay_order_num}}</text>付款订单数量</view>
+      </view>
+      <view class='lines'></view>
+    </view>
+  </view>
+
+  <!-- <view class='passenger'>
+    <view class='head'>
+      客流统计分析
+    </view>
+    <view class='diagram'>
+      <view class='words'>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+      </view>
+      <view class='browse'>
+        <view>
+          <text class='colorSkyBlue'>615</text>店铺浏览量</view>
+        <text class='line'></text>
+        <view>
+          <text class='colorYellow'>460</text>商品详情浏览人数</view>
+      </view>
+    </view>
+  </view> -->
+
+  <view class='goods'>
+    <view class='head'>
+      <view class='title'>商品销售分析</view>
+      <view class='detail'>
+        <view class="volume {{num?'active':''}}" bindtap='saleTap'>销量排行
+          <image wx:if="{{num?'active':''}}" src='/images/datastatistics_icon_triangle.png'></image>
+        </view>
+        <view class="sale {{num?'':'active'}}" bindtap='saleTap'>销售额排行
+          <image wx:if="{{num?'':'active'}}" src='/images/datastatistics_icon_triangle.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class="lists {{num?'show':''}}">
+      <view class='thead'>
+        <view class='orderNumber'>排名</view>
+        <text></text>
+        <view class='goodName'>商品名称</view>
+        <text></text>
+        <view class='saleNumber'>销量</view>
+      </view>
+      <block wx:if='{{sale_num_rank.length>0}}'>
+        <block wx:for='{{sale_num_rank}}' wx:key="">
+          <view class='list'>
+            <view class='orderNumber'>001</view>
+            <view class='goodName'>{{item.name}}</view>
+            <view class='saleNumber'>{{item.num}}</view>
+          </view>
+        </block>
+        <view class='more' bindtap="onMore" wx:if="{{more==0}}">
+          <text>查看更多</text>
+          <image src='/images/datastatistics_icon_more.png'></image>
+        </view>
+        <view class='noMore' wx:if="{{more==1}}">
+          最后一名都被你看到啦！棒棒哒
+        </view>
+      </block>
+    </view>
+    <view class="lists pages {{num?'':'show'}}">
+      <view class='thead'>
+        <view class='orderNumber'>排名</view>
+        <text></text>
+        <view class='goodName'>商品名称</view>
+        <text></text>
+        <view class='saleNumber'>销售额（元）</view>
+      </view>
+      <block wx:if='{{sale_money_rank.length>0}}'>
+        <block wx:for='{{sale_money_rank}}' wx:key="">
+          <view class='list'>
+            <view class='orderNumber'>001</view>
+            <view class='goodName'>{{item.name}}</view>
+            <view class='saleNumber salesNum'>{{item.total_price}}</view>
+          </view>
+        </block>
+        <view class='more' bindtap="onMores" wx:if="{{mores==0}}">
+          <text>查看更多</text>
+          <image src='/images/datastatistics_icon_more.png'></image>
+        </view>
+        <view class='noMore' wx:if="{{mores==1}}">
+          最后一名都被你看到啦！棒棒哒
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

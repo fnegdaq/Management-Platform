@@ -1,0 +1,43 @@
+
+.shops_view .cell_line, .shops_view .cell_noline {
+  background: #fff;
+  font-size: 28rpx;
+  position: relative;
+  height: 108rpx;
+  padding: 0 30rpx;
+}
+
+.shops_view .cell_line, .shops_view .cell_noline text{
+  font-weight: bold;
+
+}
+
+.shops_view .cell_line .select_button, .shops_view .cell_noline .select_button {
+  width: 100rpx;
+  height: 54rpx;
+  background: #00aeff;
+  border-radius: 10rpx;
+  color: #fff;
+  line-height: 54rpx;
+  text-align: center;
+}
+
+.shops_view .cell_line::before {
+  content: "";
+  position: absolute;
+  left: 30rpx;
+  bottom: 0rpx;
+  width: 690rpx;
+  height: 2rpx;
+  background: #eee;
+}
+
+.shops_view {
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+}
+
+.current {
+  font-size: 24rpx;
+  color: #00aeff;
+  font-weight: normal;
+}

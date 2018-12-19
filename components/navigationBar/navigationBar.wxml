@@ -1,0 +1,7 @@
+
+<view class="navigationBar" style="background:{{isWhite == true ? '#fff' : '#24303c'}};  color: {{isWhite == true ? '#333' : '#fafeff'}};height: {{windowHeight == '724' ? '88' : '64'}}px;">
+   <navigator open-type="navigateBack">
+    <image src="{{isWhite == true ? '/images/icon_return_black.png' : '/images/icon_return.png '}}" mode="aspectFit" style="width:20px;height:20px;position:absolute;left: 30rpx; top: {{windowHeight == '812' ? '52' : '32'}}px;" wx:if="{{canPop!=true}}" ></image>
+  </navigator>
+  <text style="margin-top:{{windowHeight == '724' ? '50' : '27'}}px;width:100%;height:30px;line-height:30px;position:absolute;left:0rpx; top:0rpx;  text-align: center;" >{{nav_title}}</text> 
+</view>

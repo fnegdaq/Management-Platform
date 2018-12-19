@@ -1,0 +1,108 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+
+<view class='orderDetail_view '>
+
+  <view class='after_bottom'>
+
+    <view class='top_bgView'>
+
+      <image src='/images/icon_order_bg.png'></image>
+      <view wx:if='{{types==3}}' class='type3 flex-row flex-y-center'>
+        <image class='flex-y-center' src='/images/icon_tick.png'></image>
+        <text>退款成功</text>
+        <view class='right flex-col'>
+          <view class='style flex-grow-1'>退款方式：微信钱包</view>
+          <view class='money'>退款金额：¥200.00</view>
+        </view>
+      </view>
+
+      <view wx:if='{{types!=3}}' class='top_order_status flex-row flex-y-center'>待付款</view>
+    </view>
+
+    <view class='suspension_view_box'>
+      <view class='suspension_view flex-col'>
+        <view class='suspension_order_status flex-y-center' wx:if='{{types==3}}'>
+          <view>申请退货</view>
+          <view class='order_type'>秒杀订单</view>
+        </view>
+        <view class='suspension_view_info flex-row flex-row-1'>
+          <view class='flex-grow-1'>收货人：阿敏</view>
+          <view class='flex-grow-0'>1343676533</view>
+        </view>
+        <view class='suspension_view_address'>收货地址：北京市 西城区 西直门外大街143号 凯旋大厦A座 B1 1022号 劲动科技</view>
+      </view>
+    </view>
+    <view class='goods_info'>
+      <view class='goods_info_title' style='{{types==3 ? "padding: 232rpx 0 30rpx 30rpx" : "padding: 162rpx 0 30rpx 30rpx"}}'>商品信息</view>
+      <view class='goods_list flex-row flex-y-center'>
+        <view class='left_image'>
+          <image mode='scaleToFill' src='/images/护肤品类图标图片.png'></image>
+        </view>
+        <view class='right_content flex-col'>
+          <view class='goods_name'>加拿大原装进口 原始猎食渴望 六种鲜鱼全猫粮1.8kg</view>
+          <view class='goods_money'>金额：¥100.00 X 1
+            <text>重量：1.8kg</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='remark'>备注：买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言买家留言</view>
+
+    </view>
+    <view class='order_info'>
+      <view class='order_info_title'>订单信息</view>
+      <view class='two_line flex-col'>
+        <view class='flex-row'>
+          <view class='flex-grow-1'>订单号</view>
+          <view>201881313913919391</view>
+        </view>
+        <view class='order_time flex-row'>
+          <view class='flex-grow-1'>下单时间</view>
+          <view>2018-07-05</view>
+        </view>
+      </view>
+      <view class='payment flex-col'>
+        <view class='flex-row'>
+          <view class='flex-grow-1'>支付方式</view>
+          <view>在线支付</view>
+        </view>
+        <view class='flex-row order_time' wx:if='{{types!=1}}'>
+          <view class='flex-grow-1'>拼团人数</view>
+          <view>
+            <text style='color:#00aeff;font-size:26rpx'>50</text>/50人</view>
+        </view>
+      </view>
+
+      <view class='two_line flex-col'>
+        <view class='flex-row'>
+          <view class='flex-grow-1'>运费</view>
+          <view>¥10.00</view>
+        </view>
+        <view class='order_time flex-row'>
+          <view class='allMoney flex-grow-1'>总金额（含运费）</view>
+          <view class='allMoney'>¥110.00</view>
+        </view>
+      </view>
+
+      <view class='actual_payment flex-row'>
+        <view class='flex-grow-1'>实际付款</view>
+        <view class='actual_payment_money'>¥{{price_begin}}.
+          <text style='color: #00aeff;font-size: 26rpx;'>{{price_end}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}" wx:if='{{types!=2}}'>
+    <view class='flex-row' wx:if='{{types==3}}'> 
+      <button bindtap='refusedTap'>拒绝</button>
+      <button style=' margin-left: 30rpx;'>同意</button>
+    </view>  
+    <view class='only_button' wx:if='{{types!=3}}' bindtap="sendout">发货</view> 
+  </view>
+  
+</view>
+
+
+
+

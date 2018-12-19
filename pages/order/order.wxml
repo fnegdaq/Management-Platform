@@ -1,0 +1,91 @@
+
+<view class='topView flex-row'>
+  <view class='flex-row flex-y-center flex-grow-1 margin-top0'>
+    <view class='search flex-grow-1 flex-y-center'>
+      <image src='/images/icon_search.png'></image>
+      <view class='search_place'>请输入订单编号
+      </view>
+    </view>
+    <view class='allOrder flex-y-center' bindtap='selectOrderStatusTap'>
+      <view class='allOrder_title'>全部订单</view>
+      <image src='{{isShowSlectView ? "/images/icon_take_back.png":"/images/icon_unfurl.png"}}'></image>
+    </view>
+  </view>
+</view>
+
+<view class='select_view flex-col flex-x-center flex-y-center' wx:if='{{isShowSlectView}}'>
+  <view class='triangle_view'>
+    <view class='image'>
+      <image src='/images/triangle.png'></image>
+    </view>
+    <view class='black_view'></view>
+  </view>
+  <view class='select_order_status_noline' catchtap='selectOrderTap' data-id="10">全部订单</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="" wx:if="{{types==2}}">拼团中</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="0" wx:if="{{types==1}}">未付款</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="1">待发货</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="2">待收货</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="3">已完成</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="4">已取消</view>
+  <view class='select_order_status' catchtap='selectOrderTap' data-id="" wx:if="{{types==2}}">拼团失败</view> 
+</view>
+
+<view class='order_view'>
+
+  <view class='order_list' wx:for="{{orders_list}}" wx:key='key'>
+    <view class='order_num_view flex-row flex-y-center'>
+      <view class='order_num flex-grow-1'>订单编号：{{item.order_no}}</view>
+      <view class='order-status'>{{item.status_name}}</view>
+    </view>
+
+    <view class='goods_list flex-row' bindtap='orderDetailTap' wx:for="{{item.goods_list}}" wx:for-item="goods" data-id="{{goods.goods_id}}">
+      <image class="goods_image flex-grow-0" mode='scaleToFit' src='{{goods.goods_pic}}'></image>
+      <view class='right_content flex-col flex-grow-1'>
+        <view class='goods_name'>{{goods.goods_name}}</view>
+        <view class='goods_money'>金额：¥{{goods.price}} X {{goods.num}}
+          <text>重量：1.8kg</text>
+        </view>
+        <view class='pt_number' wx:if='{{types==2}}'>拼团人数：
+          <text>50</text>/50人</view>
+        <view class='after_sales flex-y-center' wx:if='{{types==3}}'>普通订单</view>
+      </view>
+    </view>
+
+    <view class='combined_view {{types==3 ? "flex-row" : ""}}'>
+      <view class='buttonView flex-grow-1 flex-y-center' wx:if='{{types==3}}'>
+        <view class='left_agree' catchtap='agreeTap'>同意</view>
+        <view class='right_refused' catchtap='refusedTap' data-type='10'>拒绝</view>
+      </view>
+      <view wx:if='{{types==3}}' class='flex-grow-0 flex-y-center'>
+        共1件
+        <text style='color:#00aeff;font-size:24rpx;margin-left:10rpx;'>买家申请退款并退货</text>
+      </view>
+      <view wx:else class='combined_view_money'>
+        共1件 合计：<text>¥{{goods.pay_price}}</text> (含运费¥10.00)
+      </view>
+    </view>
+  </view>
+
+  <view class="toast_content_box flex-x-center flex-y-center" wx:if="{{isHide}}" catchtouchmove="true">
+    <view class='toast_content_white'>
+      <view class="toast_content_text">
+        {{content}}
+      </view>
+      <view class='flex-row'>
+        <view class='toast_cancle flex-grow-1 flex-x-center flex-y-center' catchtap='hiddenToastTap'>取消</view>
+        <view class='toast_line'></view>
+        <view class='toast_sure flex-grow-0 flex-x-center flex-y-center' catchtap='sureTap'>确定</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty_view" wx:if="{{orders_list.length == 0}}">
+    <image src="/images/icon_classification_empty.png" mode="aspectFit" style="margin-left:{{windowWidth/2}}rpx"></image>
+    <view class="empty_title">您还没有相关订单</view>
+  </view>
+
+</view>
+
+<view class="loading" wx:if="{{canLoadMore == true}}">
+    上拉加载更多
+</view>

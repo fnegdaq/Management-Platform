@@ -1,0 +1,22 @@
+<template name='couponList'>
+  <view class='cardLists' style="{{index==0?'  margin-top:30rpx;':' margin-top:10rpx;'}}">
+    <image src='/images/cardvoucher2.png'></image>
+    <view class='particulars'>
+      <view class='head'>{{name}}</view>
+      <view class='numMethod'>
+        <view class='num colorGray'>数
+          <text class='lines'></text>量：
+          <text class='colorBlue'>60</text>/{{total_count}}</view>
+        <view class='method colorGray'>优惠方式：
+          <text>满{{sub_price}}元减{{min_price}}元</text>
+        </view>
+      </view>
+      <view class='dateDetail'>
+        <view class='date colorGray'>有效时间：
+          <text>{{begin_time}}-{{end_time}}</text>
+        </view>
+        <image src='/images/icon_classification_func.png' data-index='{{ind}}' catchtap='operationTap'></image>
+      </view>
+    </view>
+  </view>
+</template>

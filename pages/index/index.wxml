@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<import src="../../components/funcButton/funcButton.wxml" />
+<!-- <include src="../../components/navigationBar/navigationBar.wxml" /> -->
+<include src="../../components/tabBar/tabBar" />
+
+<!-- <template is="nav_bar" data="{{nav_title:'电商管理后台', isPhoneX: windowHeight}}" /> -->
+
+<view class="container">
+
+  <view class="header">
+    <view class="login flex-x-center" wx:if="{{isSelected == false}}">
+      <view class="select_shop flex-x-center" bindtap="selectShop">选择店铺</view>
+    </view>
+    <view class="info flex-col flex-y-center" wx:if="{{isSelected == true}}">
+      <view class="price">958.36<text>元</text></view>
+      <view class="title">今日收款金额<text bindtap="withDrawcash">提现</text></view>
+      <view class="switch">切换店铺</view>
+    </view>
+    <view class="dataset flex-row">
+      <view class='data_block flex-y-center flex-col'>
+        <view class="data_num">0</view>
+        <view class="data_title">浏览人数</view>
+      </view>
+      <view class='data_block flex-y-center flex-col'>
+        <view class="data_num">0</view>
+        <view class="data_title">订单数量</view>
+      </view>
+      <view class='data_block flex-y-center flex-col'>
+        <view class="data_num">0</view>
+        <view class="data_title">单均金额(元)</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="func_title">常规商品</view>
+  <view class='manage'>
+    <image class="image1" src="/images/homepage_button_classificationmanagement.png" bindtap="tapManageButton" data-type='1'></image>
+    <image class="image2" src="/images/homepage_button_addclassification.png" bindtap="tapManageButton" data-type='2'></image>
+    <image class="image1" src="/images/homepage_button_commoditymanagement.png" bindtap="tapManageButton" data-type='3'></image>
+    <image class="image2" src="/images/homepage_button_addcommodity.png" bindtap="tapManageButton" data-type='4'></image>
+  </view>
+
+  <view class="func_title">订单管理</view>
+  <view class="order flex-row">
+    <template is="func_button" data="{{title: '普通订单', imgUrl:'/images/homepage_icon_order.png', lineUrl: '/images/homepage_decorate_blue.png',types:'1'}}" />
+    <template is="func_button" data="{{title: '拼团订单',imgUrl:'/images/homepage_icon_grouppurchase.png', lineUrl: '/images/homepage_decorate_blue.png',types:'2'}}" />
+    <template is="func_button" data="{{title: '售后订单', imgUrl:'/images/homepage_icon_aftersale.png', lineUrl: '/images/homepage_decorate_blue.png',types:'3'}}" />
+  </view>
+
+  <view class="func_title">店铺数据</view>
+  <view class="order flex-row">
+    <navigator url='/pages/statistics/statistics' hover-class="none">
+      <template is="func_button" data="{{title: '数据统计', imgUrl:'/images/homepage_icon_data.png', lineUrl: '/images/homepage_decorate_green.png',types:'4'}}" />
+    </navigator>
+  </view>
+
+</view>

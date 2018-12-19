@@ -1,0 +1,21 @@
+<view class="tabBar_box">
+  <navigator url="/pages/index/index" open-type="redirect">
+    <view class="{{windowHeight == '724'? 'tabBar30' : 'tabBar'}}" data-id="0" bindtap="tabBar">
+      <image src="{{tabBar==0? '/images/homepage_icon_home_hoghlight.png' : '/images/homepage_icon_home_normal.png'}}"></image>
+      <text class="{{tabBar==0?'active':''}}">首页</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/marketingCenter/marketingCenter" open-type="redirect">
+    <view class="{{windowHeight == '724'? 'tabBar30' : 'tabBar'}}" data-id="1" bindtap="tabBar" >
+      <image src="{{tabBar==1?'/images/homepage_icon_marketing_highlight.png':'/images/homepage_icon_marketing_normal.png'}}"></image>
+      <text class="{{tabBar==1?'active':''}}">营销中心</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/my/my" open-type="redirect">
+    <view class="{{windowHeight == '724'? 'tabBar30' : 'tabBar'}}" data-id="2" bindtap="tabBar">
+      <image src="{{tabBar==2?'/images/homepage_icon_me_highlight.png':'/images/homepage_icon_me_normal.png'}}"></image>
+      <text class="{{tabBar==2?'active':''}}">我的</text>
+    </view>
+  </navigator>
+</view>
+

@@ -1,0 +1,53 @@
+
+<view class="commodityList_view">
+
+  <view class="search_view">
+    <navigator class="searchBar flex-row flex-y-center">
+      <image src="/images/icon_search.png"></image>
+      <text>请输入商品名/商品类型</text>
+    </navigator>
+  </view>
+
+
+
+  <checkbox-group bindchange="checkboxChange">
+  <view class="commodity_card flex-row" bindtap="viewClssificationInfo" wx:for="{{goods_list}}" wx:key="unique">
+    <checkbox style='position:absolute;left:-9999px'/>
+    <icon type="circle" size="23" style="margin-top:90rpx;margin-left:10rpx;"  color="#333" wx:if="{{item.showIcon == true}}"></icon>
+    <image class="flex-grow-0" src="/images/食品类图标图片.png"></image>
+    <view class="info flex-col flex-grow-1">
+      <view class="title text-more-2">我是一直美味好吃的大汉堡哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟</view>
+      <view class="detail flex-row">
+        <view class="flex-grow-1 flex-col">
+          <view>分类:<text>零食</text></view>
+          <view>售价:<text>¥30000.00</text></view>
+          <view>开放次数:<text>200</text></view>
+        </view>
+        <view class="flex-grow-1 flex-col">
+          <view>秒杀数量:<text>2000</text></view>
+          <view>秒杀价:<text>¥30000.00</text></view>
+          
+        </view>
+      </view>
+      <image class="" src="/images/icon_classification_func.png" mode="aspectFit" catchtap="tapMenu" id="{{index}}"></image> 
+    </view>
+    <view class="menu flex-col" wx:if="{{item.showMenu == true}}" style='height:184rpx;'>
+      <image src="/images/icon_triangle_up.png" mode="aspectFit"></image>
+      <view catchtap="menuClick" id="change">编辑</view>
+      <view catchtap="menuClick" id="delete">删除</view>
+    </view> 
+   
+  </view>
+  </checkbox-group>
+  
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}" >
+    <view class="only_button" bindtap="addGoods">添加秒杀商品</view>
+  </view>
+
+
+  <view class="empty_view" wx:if="{{goods_list.length == 0}}">
+    <image src="/images/icon_classification_empty.png" mode="aspectFit"></image>
+    <view class="empty_title">您还没有秒杀商品</view>
+  </view>
+
+</view>

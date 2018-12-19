@@ -1,0 +1,26 @@
+<!--pages/initiateWithdrawal/initiateWithdrawal.wxml-->
+
+<view class='ini_View'>
+  <form>
+    <view class='list_view'>
+      <view class='content flex-row flex-y-center'>
+        <view class='left_view flex-grow-1'>提现金额</view>
+        <input placeholder='请输入提现金额' placeholder-class="placeholder" bindinput='addUnitTap'></input>
+        <view wx:if='{{showUnit}}' class='unit'>元</view>
+      </view>
+      <view class='content flex-row flex-y-center'>
+        <view class='left_view flex-grow-1'>银行卡号</view>
+        <input placeholder='请输入银行卡号' placeholder-class="placeholder" bindinput='bankCardTap'></input>
+      </view>
+      <view class='content flex-row flex-y-center'>
+        <view class='left_view flex-grow-1'>开户人姓名</view>
+        <input placeholder='请输入开户人姓名' placeholder-class="placeholder" bindinput='nameTap'></input>
+      </view>
+      <view class='content flex-row flex-y-center'>
+        <view class='left_view flex-grow-1'>开户行</view>
+        <input placeholder='请输入开户行名称' placeholder-class="placeholder" bindinput='openTap'></input>
+      </view>
+    </view>
+  </form>
+  <view class='button flex-x-center flex-y-center' bindtap='submitTap'>确定</view>
+</view>

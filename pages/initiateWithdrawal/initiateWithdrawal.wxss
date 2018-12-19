@@ -1,0 +1,48 @@
+/* pages/initiateWithdrawal/initiateWithdrawal.wxss */
+
+.list_view {
+  background: #fff;
+  box-shadow: 0 10rpx 10rpx #f4f8f9;
+}
+
+.content {
+  background: #fff;
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  border-top: 1rpx solid #eee;
+}
+
+.left_view {
+  color: #333;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.unit {
+  color: #888;
+  font-size: 28rpx;
+  margin-left: 10rpx;
+  text-align: center;
+}
+
+.content input {
+  text-align: right;
+  font-size: 28rpx;
+  color: #888;
+  font-weight: bold;
+}
+
+.placeholder {
+  color: #bbb;
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.button {
+  margin: 50rpx 30rpx 0 30rpx;
+  height: 88rpx;
+  background: #00a1ec;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}

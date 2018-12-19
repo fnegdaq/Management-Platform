@@ -1,0 +1,77 @@
+
+<view class="commodityList_view">
+
+  <view class="search_view flex-y-center">
+    <navigator class="searchBar flex-row flex-y-center">
+      <image src="/images/icon_search.png"></image>
+      <text>请输入商品民/商品类型</text>
+    </navigator>
+  </view>
+
+  <view class="selectBar flex-row">
+    <view class="selectItem flex-grow-1 flex-y-center flex-x-center" wx:for="{{tabs}}" wx:key="unique" bindtap="tabClick" id="{{index}}">
+      <view class="selectTitle">{{item}}</view>
+    </view>
+    <view class="bottom_line" style="margin-left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px); width:{{tabWidth}}rpx;"></view>
+  </view>
+
+  <checkbox-group bindchange="checkboxChange">
+    <label wx:for="{{goods_list}}" wx:key="unique">
+      <view class="commodity_card flex-row" bindtap="viewCommodityInfo">
+        <checkbox style='position:absolute;left:-9999px' value="{{index}}" checked="{{item.checked}}"/>
+        <icon type="circle" size="23" style="margin-top:90rpx;margin-left:10rpx;" wx:if="{{!item.checked && isManageStatus==true}}"></icon>
+        <icon type="success" size="23" style="margin-top:90rpx;margin-left:10rpx;"  color="#333" wx:if="{{item.checked && isManageStatus==true}}"></icon> 
+        <image class="flex-grow-0" src="/images/食品类图标图片.png"></image>
+        <view class="info flex-col flex-grow-1">
+          <view class="title text-more-2">我是一直美味好吃的大汉堡哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟哟</view>
+          <view class="detail flex-row">
+            <view class="flex-grow-1 flex-col">
+              <view>分类:<text>零食</text></view>
+              <view>售价:<text>¥30000.00</text></view>
+              <view>{{isGroup == false ? '虚拟销量:' : '团购价:'}}<text style="{{isGroup == false? '' : 'color:#80b891;'}}">{{isGroup == false ? '20000' : '¥50.00'}}</text></view>
+            </view>
+            <view class="flex-grow-1 flex-col">
+              <view>状态:<text style="color:#00aeff">上架中</text></view>
+              <view>库存:<text>¥30000.00</text></view>
+              <view>销量:<text>2000000</text></view>
+            </view>
+          </view>
+          <image class="" src="/images/icon_classification_func.png" mode="aspectFit" catchtap="tapMenu" id="{{index}}"></image> 
+        </view>
+        
+        <view class="menu flex-col" wx:if="{{item.showMenu == true}}" animation="{{animationData}}" >
+          <image src="/images/icon_triangle_up.png" mode="aspectFit"></image>
+          <view catchtap="menuClick" id="change">修改</view>
+          <view catchtap="menuClick" id="soldout" wx:if="{{item.type == 'soldout'}}">下架</view>
+          <view catchtap="menuClick" id="putaway" wx:if="{{item.type == 'putaway'}}">上架</view>
+          <view class="line"></view>
+          <view catchtap="menuClick" id="delete" data-id="{{item.id}}">删除</view>
+        </view> 
+      </view>
+    </label>
+  </checkbox-group>
+
+  <view class="manage_bar flex-row flex-y-center" wx:if="{{isManageStatus == true}}">
+    <icon type="circle" size="23" style="margin-right:20rpx;" wx:if="{{!isSelectedAll}}"></icon>
+    <icon type="success" size="23" style="margin-right:20rpx;" color="#333" wx:if="{{isSelectedAll}}"></icon>
+    <view bindtap="selectAll">全选</view>
+    <view class="flex-row flex-grow-1" style="color:#333; margin-left:140rpx;">
+      <view class="flex-grow-1" bindtap="menuClick" id="putaway">上架</view>
+      <view class="flex-grow-1" bindtap="menuClick" id="soldout">下架</view>
+      <view class="flex-grow-1" bindtap="menuClick" id="delete">删除</view>
+      <view class="flex-grow-1" bindtap="menuClick" id="done" style="color:#00aeff;">完成</view>
+    </view>
+  </view>
+
+  <view class="empty_view" wx:if="{{goods_list.length == 0}}">
+    <image src="/images/icon_classification_empty.png" mode="aspectFit" style="margin-left:{{windowWidth/2}}rpx"></image>
+    <view class="empty_title">您还没有商品</view>
+  </view>
+
+    <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}} flex-row" wx:if="{{isManageStatus == false}}">
+    <button bindtap="manage" style="{{goods_list.length == 0 ? 'background:#ccc;color:#fff;' : ''}}">批量管理</button>
+    <button bindtap="addGoods" style=' margin-left: 30rpx;'>添加商品</button>
+  </view>
+
+
+</view>

@@ -1,0 +1,35 @@
+.func_button {
+  width: 210rpx; 
+  height: 100rpx;
+  background: #fff;
+  box-shadow: 2rpx 2rpx 30rpx #ddd;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.func_button .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.func_button .line {
+  /* margin-left: -30rpx; */
+  height: 5rpx;
+  width: 95rpx;
+  position: absolute;
+}
+
+.func_button .content image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.func_button .content .title {
+  height: 100%;
+  line-height: 100rpx;
+  text-indent: 10rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,23 @@
+<import src="../../components/funcButton/funcButton.wxml" />
+<include src="../../components/tabBar/tabBar" />
+
+<view class="container ">
+  <view class="func_title">拼团商品</view>
+  <view class='spell_manage'>
+    <image class="image1" src="/images/marketingcenter_button_gpcfm.png" bindtap="tapManageButton" data-type='1'></image>
+    <image class="image2" src="/images/marketingcenter_button_agpc.png" bindtap="tapManageButton" data-type='2'></image>
+    <image class="image1" src="/images/marketingcenter_button_gpcdm.png" bindtap="tapManageButton" data-type='3'></image>
+    <image class="image2" src="/images/marketingcenter_button_agpg.png" bindtap="tapManageButton" data-type='4'></image>
+  </view>
+  <view class="flex-row">
+    <view class="sec_manage">
+      <view class="func_title">秒杀商品</view>
+      <image class="image1" src="/images/marketingcenter_button_skcm.png" bindtap="tapManageButton" data-type='5'></image>
+      <image class="image2" src="/images/marketingcenter_button_aask.png" bindtap="tapManageButton" data-type='6'></image>
+    </view>
+    <view class="sec_manage">
+      <view class="func_title">卡券</view>
+        <template is="func_button" data="{{title: '卡券管理', imgUrl:'/images/homepage_icon_cardvoucher.png', lineUrl: '/images/homepage_decorate_yellow.png' }}" />
+    </view>
+  </view>
+</view>

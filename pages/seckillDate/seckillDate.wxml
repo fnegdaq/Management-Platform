@@ -1,0 +1,18 @@
+
+<view class='view'>
+  <view class='' wx:for="{{[1,1,1,1,1]}}">
+    <view class='item-view'>
+      <text class='item-text'>2018-07-06</text>
+      <image class='item-img' src='../../images/icon_delete.png' ></image>
+    </view>
+
+
+  </view>
+
+
+
+</view>
+
+<view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+  <view class="only_button" bindtap="goToSeckillSelectDate">选择日期</view>
+</view>

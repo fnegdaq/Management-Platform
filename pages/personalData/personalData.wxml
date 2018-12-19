@@ -1,0 +1,31 @@
+<!--pages/personalData/personalData.wxml-->
+
+<view class='personal_view '>
+  <view class='change_avatar flex-row flex-y-center'>
+    <view class='left-title flex-grow-1'>修改头像</view>
+    <image src='{{avatar}}' mode="scaleToFill" class='avatar' bindtap='avatarTap'></image>
+    <image src='/images/me_icon_getinto_big.png' mode='aspectFit' class='arrow'></image>
+  </view>
+
+  <view class='other_View'>
+    <view class='content flex-row flex-y-center'>
+      <view class='left-title flex-grow-1'>账号</view>
+      <view class='{{hiddenArrow ? "right_content0" : "right_content"}}'>1313131313</view>
+      <image src='/images/me_icon_getinto_big.png' mode='aspectFit' hidden='{{hiddenArrow}}' class='arrow'></image>
+    </view>
+    <view class='content flex-row flex-y-center'>
+      <view class='left-title flex-grow-1'>性别</view>
+      <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" class='flex-row flex-y-center picker'>
+        <view class='right_content'>{{sex.length == 0 ? '请选择' : sex}}</view>
+      </picker>
+
+      <image src='/images/me_icon_getinto_big.png' mode='aspectFit' class='arrow'></image>
+    </view>
+    <view class='content flex-row flex-y-center' bindtap='forgetPassword'>
+      <view class='left-title flex-grow-1'>修改密码</view>
+      <view class='right_content'> </view>
+      <image src='/images/me_icon_getinto_big.png' mode='aspectFit' class='arrow'></image>
+    </view>
+
+  </view>
+</view>

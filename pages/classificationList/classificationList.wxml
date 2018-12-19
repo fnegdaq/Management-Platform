@@ -1,0 +1,35 @@
+
+<view class="classification_view">
+
+  <view class="top_view flex-row flex-y-center" wx:if="{{isSubClass}}">
+    <image class="flex-grow-0" src="/images/食品类图标图片.png"></image>
+    <text class="text-more flex-grow-1" style="margin-right:350rpx;">绿色食品类食品类食品类食品类食品类</text>
+    <view class="number flex-grow-0">分类<text>4000</text>个 | 商品<text>2000</text>款</view>
+  </view>
+  
+  <block wx:for="{{classification_list}}" wx:key="unique">
+    <view class="classification_card flex-row" bindtap="viewClssificationInfo">
+      <image class="flex-grow-0" src="/images/食品类图标图片.png"></image>
+      <view class="info flex-col flex-grow-1">
+        <view class="title">我是一直美味好吃的大汉堡哟哟哟哦哟哟哟哟<text style='color:#888;font-weight:normal;margin-left:20rpx;'>({{isSubClass?'二级分类':'一级分类'}})</text></view>
+        <view class="number">共5款</view>
+        <image class="flex-grow-1" src="/images/icon_classification_func.png" mode="aspectFit" catchtap="tapMenu" id="{{index}}"></image>
+      </view>
+       <view class="menu flex-col" wx:if="{{item.showMenu == true}}" animation="{{animationData}}">
+        <image src="/images/icon_triangle_up.png" mode="aspectFit"></image>
+        <view>编辑</view>
+        <view bindtap="deleteClassification" data-id="{{item.id}}">删除</view>
+      </view> 
+    </view>
+  </block>
+
+  <view class="empty_view" wx:if="{{classifiocation_list.length == 0}}">\
+    <image src="/images/icon_classification_empty.png" mode="aspectFit" style="margin-left:{{windowWidth/2}}rpx"></image>
+    <view class="empty_title">您还没有任何分类</view>
+  </view>
+
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+    <view class="only_button" bindtap="add_cassify">添加分类</view>
+  </view>
+
+</view>

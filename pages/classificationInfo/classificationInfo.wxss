@@ -1,0 +1,99 @@
+
+.classification_view .empty_view image{
+  height: 380rpx;
+  width: 380rpx;
+  margin-top: 240rpx;
+}
+
+.classification_view .empty_view .empty_title{
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.classification_view .top_view {
+  height: 80rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  position: relative;
+  box-shadow: 5rpx 5rpx 20rpx #eee;
+}
+
+.classification_view .top_view image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.classification_view .top_view text {
+  margin: 10rpx;
+  color: #333;
+}
+
+.classification_view .top_view .number {
+  position: absolute;
+  right: 30rpx;
+  color: #bbb;
+}
+
+.classification_view .top_view .number text{
+  color: #888;
+}
+
+
+.classification_view .goods_card {
+  padding: 30rpx 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  position: relative;
+  margin: 30rpx 30rpx;
+}
+
+.classification_view .goods_card image{
+  height: 180rpx;
+  width: 180rpx;
+}
+
+.classification_view .goods_card .info {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.classification_view .goods_card .info .title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.classification_view .goods_card .info .price {
+  font-size: 28rpx;
+  color: #00aeff;
+  margin-top: 8rpx;
+}
+
+.classification_view .goods_card .info image {
+  height: 30rpx;
+  width: 60rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.classification_view .goods_card .info .number {
+  font-size: 24rpx;
+  color: #bbb;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.classification_view .goods_card .info .number text{
+  font-size: 24rpx;
+  color: #888;
+  font-weight: bold;
+}
+

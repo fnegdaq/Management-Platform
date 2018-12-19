@@ -1,0 +1,8 @@
+/* pages/seckillManagement/seckillManagement.wxss */
+@import "../../pages/commodityList/commodityList.wxss";
+.bottom_view view{
+  width: 690rpx;
+}
+.empty_view image{
+  margin-top: 224rpx;
+}

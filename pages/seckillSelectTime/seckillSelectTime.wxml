@@ -1,0 +1,20 @@
+
+<view class='view'>
+  <view class='' wx:for="{{timeData}}">
+    <view class='item-view' data-index="{{index}}" data-item="{{item}}" bindtap='changeItemSelected'>
+      <text class='item-text'>{{item.time}}</text>
+      <image class='item-img' src="{{(selectAll || item.select == 1)?'../../images/icon_selected.png':'../../images/icon_unselected.png'}}" ></image>
+    </view>
+
+
+  </view>
+  <view style='width:100vw;height:120rpx;'></view>
+
+
+</view>
+
+<view class="bottom_view flex-row">
+  <view class='bottom_right'>确定</view>
+  <view class='bottom_left' bindtap='changeSelectAll'>全选</view>
+  <image class='bottom_img' bindtap='changeSelectAll' src="{{selectAll?'../../images/icon_selected.png':'../../images/icon_unselected.png'}}" ></image>
+</view>

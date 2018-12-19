@@ -1,0 +1,8 @@
+
+<view class="shops_view">
+  <view class="cell_{{index==(shop_list.length - 1)?'noline':'line'}} flex-row flex-y-center" wx:for="{{shop_list}}" wx:key="unique">
+    <text class="flex-grow-1">{{item.name}}</text>
+    <view class="select_button flex-grow-0" wx:if="{{current_shop_id!=item.id}}" bindtap="doSelectShop" data-id="{{item.id}}">选择</view>
+    <view class="current flex-grow-0" wx:if="{{current_shop_id==item.id}}">当前店铺</view>
+  </view>
+</view>

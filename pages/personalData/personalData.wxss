@@ -1,0 +1,52 @@
+/* pages/personalData/personalData.wxss */
+
+.change_avatar {
+  padding: 40rpx 30rpx;
+  background: #fff;
+  display: flex;
+}
+
+.left-title {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.avatar {
+  margin-right: 30rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  border: 4rpx solid #fff;
+  background: palegoldenrod;
+}
+
+.arrow {
+  margin-right: 0rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.other_View {
+  background: #fff;
+  box-shadow: 0 10rpx 10rpx #f4f8f9;
+}
+
+.content {
+  margin: 0 30rpx;
+  padding: 30rpx 0;
+  border-top: 1rpx solid #eee;
+}
+
+.right_content {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 30rpx;
+}
+
+.right_content0 {
+  font-size: 28rpx;
+  color: #666;
+  margin-right: 0;
+}
+
+

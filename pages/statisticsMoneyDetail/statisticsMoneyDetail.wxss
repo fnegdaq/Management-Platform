@@ -1,0 +1,95 @@
+/* pages/statisticsMoneyDetail/statisticsMoneyDetail.wxss */
+
+.colorBlue {
+  color: #00aeff;
+}
+
+.colorOrange {
+  color: #f5a000;
+}
+
+.main{
+  width:100%;
+  background: #f7fbfc;
+}
+
+.main .noRecord{
+  margin-top:450rpx;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+}
+
+.noRecord image{
+  width:380rpx;
+  height:380rpx;
+}
+
+.noRecord text{
+  margin-top:30rpx;
+  font-size:28rpx;
+  color:#9D9D9D;
+}
+
+.recordBox{
+  padding:0 30rpx;
+  background:#fff;
+  box-shadow:5rpx 5rpx 20rpx rgba(255,255,255,0.3);
+}
+
+.recordBox .list{
+  border-bottom:2rpx solid #eee;
+  padding:30rpx 0;
+}
+
+.recordBox .list:last-child{
+  border-bottom:none;
+}
+
+.recordBox .list .dateMoney{
+  display:flex;
+  justify-content: space-between;
+}
+
+.recordBox .list .dateMoney .money{
+  font-size:28rpx;
+  font-weight:bold;
+}
+
+.recordBox .list .dateMoney .date{
+  font-size:24rpx;
+  color:#999;
+}
+
+.recordBox .list .detail{
+  margin-top:20rpx;
+  display:flex;
+  justify-content: space-between;
+}
+
+.recordBox .list .detail .orderId{
+  font-size:24rpx;
+  color:#666;
+  margin-right:30rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.recordBox .list .detail .nameNum{
+  display:flex;
+  font-size:24rpx;
+  color:#666;
+}
+
+.recordBox .list .detail .nameNum .name{
+  max-width:190rpx;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.recordBox .list .detail .nameNum .num{
+  margin-left:10rpx;
+}

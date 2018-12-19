@@ -1,0 +1,30 @@
+<!--pages/editdetails/editdetails.wxml-->
+<import src="/components/navigationBar/navigationBar.wxml" />
+<template is="nav_bar" data="{{nav_title:'编辑详情页',canPop: true}}" />
+<view class="ll_d"></view>
+<view class="ll_titles">请开始编辑您的详情页~</view>
+ 
+ <view class="ll_boximg">
+  <image class="ll_showimages" src='{{image_photo}}'></image>
+  <image class="ll_close" src='/images/ll_close.png'></image>
+ </view>
+
+
+
+<view class="ll_texts">
+  <textarea class="ll_textarea" placeholder="请编辑"></textarea>
+  <image class="ll_close2" src='/images/ll_close.png'></image>
+</view>
+ 
+
+
+
+<view class="ll_foots">
+  <view class="ll_addbutton">
+    <view class="ll_addbtnimg" bindtap="choice">添加图片</view>
+    <view class="ll_addbtntext">添加文字</view>
+  </view>
+  <view class="ll_preservation">保存</view>
+</view>
+
+

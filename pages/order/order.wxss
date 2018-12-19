@@ -1,0 +1,288 @@
+/* pages/order/order.wxss */
+
+.topView {
+  background: #24303c;
+  height: 90rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.order_view {
+  padding-top: 90rpx;
+}
+
+.margin-top0 {
+  height: 68rpx;
+  margin: 0;
+}
+
+.search {
+  height: 68rpx;
+  border-radius: 34rpx;
+  background: #1d2630;
+  margin: 0 30rpx;
+  top: 0;
+}
+
+.search image {
+  width: 27rpx;
+  height: 27rpx;
+  margin-left: 30rpx;
+}
+
+.search_place {
+  color: #8e9398;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+}
+
+.allOrder_title {
+  color: #eee;
+  font-size: 26rpx;
+}
+
+.allOrder image {
+  width: 24rpx;
+  height: 13rpx;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+}
+
+.order_list {
+  margin-bottom: 20rpx;
+  box-shadow: 0 10rpx 10rpx #f4f8f9;
+  background: #fff;
+}
+
+.order_num_view {
+  padding: 20rpx 30rpx;
+}
+
+.order_num {
+  color: #333;
+  font-size: 28rpx;
+}
+
+.order-status {
+  color: #00aeff;
+  font-size: 28rpx;
+}
+
+.goods_list {
+  background: #f5f5f5;
+  margin-bottom: 10rpx;
+  padding: 30rpx;
+}
+
+.goods_image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+
+.right_content {
+  margin-left: 20rpx;
+  /* margin-top: 40rpx; */
+}
+
+.goods_name {
+  color: #333;
+  font-size: 28rpx;
+  line-height: 38rpx;
+  font-weight: bold;
+}
+
+.goods_money {
+  color: #666;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  margin-top: 15rpx;
+}
+
+.goods_money text {
+  margin-left: 40rpx;
+}
+
+.pt_number {
+  color: #666;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  margin-top: 20rpx;
+}
+
+.pt_number text {
+  color: #00aeff;
+  font-size: 24rpx;
+}
+
+.after_sales {
+  color: #00aeff;
+  font-size: 24rpx;
+  border: 1rpx solid #00aeff;
+  border-radius: 4rpx;
+  padding: 0 8rpx;
+  width: 96rpx;
+  text-align: center;
+  line-height: 28rpx;
+  margin-top: 14rpx;
+}
+
+.combined_view {
+  background: #fff;
+  padding: 20rpx 30rpx 30rpx 30rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+
+.combined_view_money {
+  text-align: right;
+}
+
+.buttonView {
+  color: #333;
+  font-size: 26rpx;
+}
+
+.left_agree {
+  margin-right: 20rpx;
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  width: 150rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+}
+
+.right_refused {
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+  width: 150rpx;
+  height: 54rpx;
+  text-align: center;
+  line-height: 54rpx;
+}
+
+.combined_view text {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.select_view {
+  border-radius: 10rpx;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 200rpx;
+  position: fixed;
+  top: 68rpx;
+  right: 10rpx;
+}
+
+.triangle_view {
+  height: 20rpx;
+  width: 100%;
+  background: #000;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.triangle_view  .image {
+  position: absolute;
+  top: -38rpx;
+  width: 30rpx;
+  height: 12rpx;
+  right: 14rpx;
+}
+
+.image image {
+  width: 100%;
+  height: 100%;
+}
+
+.select_order_status {
+  padding: 30rpx 0;
+  width: 100%;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  border-top: 2rpx solid #737373;
+  text-align: center;
+}
+
+.select_order_status_noline {
+  padding: 20rpx 0 30rpx 0;
+  width: 100%;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.toast_content_box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.toast_content_white {
+  position: relative;
+  background: #fff;
+  width: 540rpx;
+  border-radius: 10rpx;
+}
+
+.toast_content_text {
+  height: 100%;
+  width: 100%;
+  padding-top: 100rpx;
+  padding-bottom: 60rpx;
+  color: #333;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.toast_cancle {
+  color: #999;
+  font-size: 30rpx;
+  width: 270rpx;
+  height: 110rpx;
+}
+
+.toast_line {
+  width: 2rpx;
+  height: 70rpx;
+  background: #eee;
+  margin-top: 20rpx;
+}
+
+.toast_sure {
+  color: #00aeff;
+  font-size: 30rpx;
+  width: 270rpx;
+  height: 110rpx;
+}
+
+.loading {
+  color: #b0b0b0;
+  text-align: center;
+  margin: 20rpx 0;
+  font-size: 26rpx;
+}
+
+.empty_view image{
+  height: 380rpx;
+  width: 380rpx;
+  margin-top: 230rpx;
+}
+
+.empty_view .empty_title{
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}

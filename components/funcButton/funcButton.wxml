@@ -1,0 +1,9 @@
+<template name="func_button">
+  <view class="func_button" bindtap="tapButton" data-type='{{types}}'>
+    <image class="line" src="{{lineUrl}}"></image>
+    <view class="content">
+      <image src="{{imgUrl}}"></image>
+      <view class="title">{{title}}</view>
+    </view>
+  </view>
+</template>

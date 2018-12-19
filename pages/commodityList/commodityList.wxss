@@ -1,0 +1,185 @@
+.commodityList_view {
+  padding-bottom: 98rpx;
+}
+
+.search_view {
+  background: #24303c;
+  height: 96rpx;
+  padding: 0rpx 30rpx;
+}
+
+.search_view .searchBar {
+  background: #1d2630;
+  color: #8e9398;
+  font-size: 26rpx;
+  height: 68rpx;
+  border-radius: 68rpx;
+  width: 100%;
+}
+
+.search_view .searchBar image {
+  width: 25rpx;
+  height: 25rpx;
+  margin-left: 30rpx;
+}
+
+.search_view .searchBar text {
+  margin-left: 10rpx;
+  line-height: 68rpx;
+}
+
+.selectBar {
+  height: 90rpx;
+  background: #fff;
+  box-shadow: 5rpx 5rpx 20rpx #eee;
+  position: relative;
+}
+
+.selectBar .selectItem {
+  font-size: 32rpx;
+  font-weight: bold; 
+  height: 100%;
+}
+
+.bottom_view view {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  width: 320rpx;
+}
+
+.empty_view image{
+  height: 380rpx;
+  width: 380rpx;
+  margin-top: 134rpx;
+}
+
+.empty_view .empty_title{
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.selectBar .bottom_line {
+  position:absolute;
+  content:" ";
+  left:50rpx;
+  bottom:0;
+  width: 64rpx;
+  height:3px;
+  background-color:#00aeff;
+  -webkit-transition:-webkit-transform .3s;
+  transition:-webkit-transform .3s;
+  transition:transform .3s;
+}
+
+.commodity_card {
+  padding: 30rpx 20rpx 30rpx 10rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  position: relative;
+  height: 228rpx; /* 288 -30 -30*/
+}
+
+.commodity_card image{
+  height: 180rpx;
+  width: 180rpx;
+  margin-left: 20rpx;
+}
+
+.commodity_card .info {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.commodity_card .info .title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.commodity_card .info image {
+  height: 40rpx;
+  width: 55rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 0; 
+}
+
+.commodity_card .info .detail {
+  font-size: 24rpx;
+  color: #bbb;
+  position: absolute;
+  bottom: 45rpx;
+  left: 0;
+  right: 0;
+  line-height: 1.4;
+}
+
+.commodity_card .info .detail text{
+  color: #555;
+  margin-left: 5rpx;
+}
+
+.commodity_card .menu {
+  background-color:rgba(0,0,0,0.7) ;
+  height: 276rpx;
+  width: 150rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  position: absolute;
+  line-height: 92rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  right: 25rpx;
+  top: 275rpx;
+  z-index: 50;
+}
+
+.commodity_card .menu::before {
+  content: "";
+  width: 100%;
+  height: 2rpx;
+  position: absolute; 
+  left: 0;
+  top: 92rpx;
+  background-color: #737373;
+}
+
+.commodity_card .menu image {
+  height: 25rpx;
+  width: 30rpx;
+  margin-top: -12rpx;
+  margin-left: 100rpx;
+}
+
+.commodity_card .menu .line {
+  width: 100%;
+  height: 2rpx;
+  background: #737373;
+  position: absolute; 
+  left: 0;
+  top: 184rpx;
+}
+
+.manage_bar {
+  padding-left: 40rpx; 
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+  font-size: 32rpx;
+  color: #888;
+}

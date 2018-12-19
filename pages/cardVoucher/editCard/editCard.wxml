@@ -1,0 +1,44 @@
+<!--pages/cardVoucher/editCard/editCard.wxml-->
+<view class='main'>
+  <view class='sett'>
+    <view class='list name'>
+      <view class='tit'>名称</view>
+       <input placeholder='请输入卡券名称' placeholder-class='colorB' bindinput='bindinput' value='{{names}}'></input> 
+    </view>
+    <view class='list'>
+      <view class='tit'>数量</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput2' value='{{nums}}'></input>张</view>
+    </view>
+    <view class='list'>
+      <view class='tit'>最低消费金额</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput3' value='{{customeMoneys}}'></input>元</view>
+    </view>
+    <view class='list'>
+      <view class='tit'>优惠金额</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput4' value='{{couponMoneys}}'></input>元</view>
+    </view>
+    <view class='list listdate' bindtap='dateTap'>
+      <view class='tit'>开放日期</view>
+      <view class='date'>
+         <text  style='color:#888;' wx:if='{{date_begin == 1}}'>{{year}}.{{month}}.{{day}}</text> 
+         <text style='color:#888;' wx:else>{{date}}</text> 
+        <image src='/images/me_icon_getinto_big.png'></image>
+      </view>
+    </view>
+    <view class='list listdate' bindtap='dateTap2'>
+      <view class='tit'>结束日期</view>
+      <view class='date'>
+         <text  style='color:#888;' wx:if='{{date_end == 1}}'>{{years}}.{{months}}.{{days}}</text> 
+         <text style='color:#888;' wx:else>{{dates}}</text> 
+        <image src='/images/me_icon_getinto_big.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+    <view class="only_button" bindtap="saveTap">保存</view>
+  </view>
+</view>

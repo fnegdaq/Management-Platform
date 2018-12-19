@@ -1,0 +1,94 @@
+/* pages/seckillAdd/seckillAdd.wxss */
+.top_view{
+  box-shadow: 0px 0px 10rpx 5rpx rgba(0,0,0,.03);
+}
+.item_view {
+  height: 90rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+  border-bottom: 1rpx solid #eee;
+  position: relative;
+}
+
+.item_text {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 89rpx;
+}
+
+.yuan {
+  right: 0;
+  position: absolute;
+}
+
+.input {
+  width: 240rpx;
+  margin-right: 40rpx;
+  right: 0;
+  top: 0;
+  position: absolute;
+  text-align: right;
+  font-size: 28rpx;
+  color: #bbb;
+  line-height: 89rpx;
+  height: 89rpx;
+}
+
+.item_name {
+  font-size: 28rpx;
+  color: #888;
+  line-height: 89rpx;
+  margin-left: 176rpx;
+  margin-right: 20rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: absolute;
+}
+
+.item_arrow {
+  width: 13rpx;
+  height: 24rpx;
+  right: 0;
+  position: absolute;
+  margin-top: 33rpx;
+}
+
+.item_line {
+  background-color: #eee;
+  height: 1rpx;
+  width: 690rpx;
+}
+
+.item_select{
+  width: 36rpx;
+  height: 36rpx;
+  position: absolute;
+  margin-top: 27rpx;
+  margin-left: 160rpx;
+}
+
+.bottom_view {
+  padding: 0rpx 10rpx;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+}
+
+.bottom_view view {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  margin-top: 18rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}

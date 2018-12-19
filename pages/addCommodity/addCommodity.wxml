@@ -1,0 +1,55 @@
+
+<view class="addCommodity_view ">
+
+  <view class="title">添加商品图片 (0/5)<text>建议上传120 x 120像素，不超过500kb</text></view>
+  <view class="pic_container" wx:for="{{tempFilePaths}}" wx:key="unique" style="margin-right:{{index==2?'0':'30'}}rpx;">
+    <image class="pic" src="{{tempFilePaths[index] == 'placeholder' ? '' : tempFilePaths[index]}}" bindtap="choosePic">
+      <image class="add_pic" src="/images/icon_add_pic.png" wx:if="{{item=='placeholder'}}"></image>
+    </image>
+    <image class="delete_pic" src="/images/icon_delete_pic.png" bindtap='deletePic' wx:if="{{item!='placeholder'}}" data-index="{{index}}"></image>
+  </view> 
+
+  <form bindsubmit="saveSetting">
+    <view class="cell" wx:for="{{isGroup==false?cell_list:group_cell_list}}" wx:key="unique">
+      <view class="{{item.title=='二级分类'? 'noInput' : ''}}">{{item.title}}</view>
+      <!-- 样式：只有输入框 -->
+      <view class='only_input' wx:if="{{item.title=='名称' || item.title=='单位'}}">
+        <input name="{{item.name}}" placeholder="{{item.placeholder}}" placeholder-style="color:#bbb"></input>
+      </view>
+      <!-- 样式：push -->
+      <view class="pushToPage flex-row" wx:if="{{item.title=='商品图文描述' || item.title=='卡券发放' || item.title=='拼团限时'}}" bindtap="editDetailInfo" data-type="{{item.title}}">
+        <!-- <view wx:if="{{item.title=='卡券发放'}}">会员卡</view> -->
+        <view wx:if="{{item.title=='拼团限时'}}">2018.06.06 10:10</view>
+        <image src="/images/me_icon_getinto_big.png" mode="aspectFit"></image>
+      </view>
+      <!-- 样式：0件  -->
+      <view wx:if="{{item.unit.length!=0}}" class="flex-row input_view flex-y-center">
+        <input name="{{item.name}}" placeholder="0" placeholder-style="color:#bbb" adjust-position="true"></input>
+        <view>{{item.unit}}</view>
+      </view>
+      <!-- 样式：下拉 -->
+      <view class="pull_down flex-row" wx:if="{{item.cell_type=='pull_down'}}"  bindtap="pullDown" data-type="{{item.title}}">
+        <view class="{{item.title=='二级分类'? 'noInput' : ''}}">{{item.subTitle}}</view>
+        <image src="/images/icon-arrow-down.png" mode="aspectFit"></image>
+      </view>
+      <!-- 样式：switch  -->
+      <view class="switch_view" wx:if="{{item.title=='允许单买'}}">
+        <switch name="{{item.name}}" color="#00aeff"></switch>
+      </view>
+      <!-- 下拉菜单 -->
+      <view class="menu" wx:if="{{item.isExpend == true}}">
+        <image src="/images/icon_triangle_up.png" mode="aspectFit"></image>
+        <view>食品类</view>
+        <view>水果类</view>
+        <view>化妆品</view>
+      </view>
+    </view>
+
+    <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}} flex-row">
+      <button bindtap="putaway">上架</button>
+      <button form-type="submit" style=' margin-left: 30rpx;'>入库</button>
+    </view>
+  </form>
+
+</view>
+

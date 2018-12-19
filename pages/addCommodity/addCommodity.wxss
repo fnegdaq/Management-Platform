@@ -1,0 +1,157 @@
+
+.addCommodity_view {
+  background: #fff;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  font-size: 28rpx;
+  padding: 25rpx 30rpx 0rpx 30rpx;
+  position: relative;
+  margin-bottom: 120rpx;
+}
+
+.addCommodity_view .title {
+  margin-bottom: 25rpx;
+}
+
+.addCommodity_view .title text {
+  font-size: 20rpx;
+  color: #999;
+  font-weight: normal;
+  margin-left: 20rpx;
+}
+
+.addCommodity_view .pic_container {
+  width: 210rpx;
+  height: 210rpx;
+  margin-bottom: 30rpx; 
+  position: relative;
+  float: left;
+}
+
+.addCommodity_view .pic {
+  width: 100%;
+  height: 100%;
+  /* margin-bottom: 20rpx;  */
+  background: #f5f5f5;
+  position: relative;
+}
+
+.addCommodity_view .add_pic {
+  position: absolute;
+  left: 75rpx;
+  top: 75rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.addCommodity_view .delete_pic {
+  position: absolute;
+  left: 195rpx;
+  top: -14rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.addCommodity_view .cell {
+  font-size: 28rpx;
+  padding: 25rpx 0rpx;
+  position: relative;
+  clear: left;
+  display: flex;
+  justify-content: space-between;
+}
+
+.addCommodity_view .cell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0rpx;
+  height: 1rpx;
+  width: 690rpx;
+  background-color: #eee;
+}
+
+.cell .menu {
+  background-color:rgba(0,0,0,0.7) ;
+  height: 276rpx;
+  width: 150rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  position: absolute;
+  line-height: 92rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  right: 0rpx;
+  top: 85rpx;
+  z-index: 50;
+}
+
+.cell .menu::before {
+  content: "";
+  width: 100%;
+  height: 2rpx;
+  position: absolute; 
+  left: 0;
+  top: 92rpx;
+  background-color: #737373;
+}
+
+.cell .menu image
+{
+  height: 25rpx;
+  width: 30rpx;
+  top: -18rpx;
+  left: 90rpx;
+  position: absolute;
+}
+
+.cell .pull_down {
+  color: #999;
+}
+
+.cell .pull_down image {
+  width:25rpx;
+  height:25rpx;
+  margin-top:10rpx;
+  margin-left:10rpx;
+}
+
+.cell .input_view {
+  height: 44rpx;
+  text-align: right;
+}
+
+.cell .input_view input {
+  margin-right: 10rpx;
+}
+
+.cell .only_input {
+  height: 44rpx;
+  text-align: right;
+}
+
+.cell .pushToPage {
+  width: 60%;
+  height: 100%;
+  text-align: right;
+  justify-content: flex-end;
+  color: #888;
+}
+
+.cell .pushToPage image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-top: 8rpx;
+}
+
+.cell .noInput {
+  color: #ddd;
+}
+
+.switch_view switch {
+  width: 80rpx;
+}
+
+.wx-switch-input{width:80rpx !important;height:40rpx !important;}
+.wx-switch-input::before{width:79rpx !important;height: 37rpx !important;}
+.wx-switch-input::after{width: 37rpx !important;height: 37rpx !important;}

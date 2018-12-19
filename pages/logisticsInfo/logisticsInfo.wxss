@@ -1,0 +1,56 @@
+
+.select_view {
+  background: #fff;
+  padding: 25rpx 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  height: 54rpx;
+}
+
+.select_view .radio-group .radio {
+  margin-left: 60rpx;
+}
+
+.bottom_view button {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  width: 320rpx;
+}
+
+.info_view {
+  background: #fff;
+  padding: 0rpx 30rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  margin-top: 20rpx;
+}
+
+.info_view .cell ,.info_view .cell_noline{
+  font-size: 28rpx;
+  padding: 25rpx 0rpx;
+  position: relative;
+  clear: left;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.info_view .cell::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0rpx;
+  height: 1rpx;
+  width: 690rpx;
+  background-color: #eee;
+  z-index: 10;
+}

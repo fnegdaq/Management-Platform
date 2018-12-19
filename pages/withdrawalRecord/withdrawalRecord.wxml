@@ -1,0 +1,17 @@
+<!--pages/withdrawalRecord/withdrawalRecord.wxml-->
+<import src="../../components/navigationBar/navigationBar.wxml" />
+<template is="nav_bar" data="{{nav_title: '提现记录', canPop: true, isWhite: false}}" />
+<view class='record_View after-navBar'>
+  <view class='listView flex-col' wx:for='{{[1,1,1,1,1,1,1,1,1,1,1,1,1,1]}}' wx:key='key'>
+    <view class='list_top flex-row flex-y-center'>
+      <view class='list_money flex-grow-1'>-500.00
+        <text>提现中</text>
+      </view>
+    </view>
+    <view class='list_time'>2018-06-28 18:35:00</view>
+    <view class='list_bottom flex-row flex-y-center'>
+      <view class='list_rank flex-grow-1'>工商银行：6101213143141414</view>
+      <view class='list_name'>阿敏</view>
+    </view>
+  </view>
+</view>

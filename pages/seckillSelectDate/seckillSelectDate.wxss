@@ -1,0 +1,106 @@
+/* pages/dateSelect/dateSelect.wxss */
+page{
+  background-color: white;
+}
+.date-day {
+  display: flex;
+  padding: 5px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1px;
+}
+
+.date-day.bgitem {
+  background-color: #cde7f3;
+  color: white;
+  border-radius: 10rpx;
+}
+
+.date-day.active {
+  background: #00aeff;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.date-day.finish {
+  background: #fa684b;
+  color: #fff;
+  border-radius: 10rpx;
+}
+
+.date-day.unavailable {
+  color: #aaa;
+}
+
+.date-week {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 5px;
+}
+
+.week {
+  color: #099fde;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.item-days {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  position: relative;
+}
+
+.bgwhite {
+  background-color: #fff;
+}
+
+.line {
+  height: 2rpx;
+  width: 100vw;
+  background-color: #eee;
+}
+
+.days {
+  position: absolute;
+  font-size: 26rpx;
+  top: 0;
+  left: 0;
+  display: inline;
+  padding: 0rpx 6rpx;
+  margin-left: -55rpx;
+  background-color: #00aeff;
+   border-radius: 10rpx;
+}
+
+.bottom_view {
+  padding: 0rpx 10rpx;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+}
+
+.bottom_view view {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  margin-top: 18rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}

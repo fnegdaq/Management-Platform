@@ -1,0 +1,80 @@
+<!--pages/cardVoucher/cardVoucher.wxml-->
+<import src='../../components/couponList/couponList.wxml' />
+
+<view class='main' catchtap='operationTapHid'>
+  <view class='tabBar'>
+    <view class="{{status==0?'active':''}}" data-id='0' bindtap='cardTap'>未开始</view>
+    <view class="{{status==1?'active':''}}" data-id='1' bindtap='cardTap'>进行中</view>
+    <view class="{{status==2?'active':''}}" data-id='2' bindtap='cardTap'>已失效</view>
+  </view>
+
+  <!-- <view class='noContent' wx:if='{{undoList.length==0 || ingList.length == 0 || finishList.length == 0}}'>  -->
+  <view class='noContent' wx:if="{{status==0 && undoList.length==0}}">
+    <image src='/images/noRecord.png'></image>
+    <view>您暂时还没有卡券~</view>
+  </view>
+
+  <view class='noContent' wx:if="{{status==1 && ingList.length==0}}">
+    <image src='/images/noRecord.png'></image>
+    <view>您暂时还没有卡券~</view>
+  </view>
+
+  <view class='noContent' wx:if="{{status==2 && finishList.length==0}}">
+    <image src='/images/noRecord.png'></image>
+    <view>您暂时还没有卡券~</view>
+  </view>
+
+  <block wx:if='{{status==0}}'>
+    <view class='content' catchtap='operationTapHid'>
+      <block wx:for='{{undoList}}' wx:key="">
+        <view data-index='{{index}}' style='position:relative;'>
+          <template is='couponList' data='{{...item}}'></template>
+          <view class='editDele {{operation == index ?"":"hidden"}}'>
+            <view class='img'>
+              <image src='/images/triangle.png'></image>
+            </view>
+            <view class='edit' data-cardId='{{item.id}}' catchtap='editTap'>编辑</view>
+            <view class='del' data-cardId='{{item.id}}' catchtap='delTap'>删除</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <block wx:if='{{status==1}}'>
+    <view class='content' catchtap='operationTapHid'>
+      <block wx:for='{{ingList}}' wx:key="">
+        <view data-index='{{index}}' style='position:relative;'>
+          <template is='couponList' data='{{...item}}'></template>
+          <view class='editDele {{operation == index ?"":"hidden"}}'>
+            <view class='img'>
+              <image src='/images/triangle.png'></image>
+            </view>
+            <view class='edit' data-cardId='{{item.id}}' catchtap='editTap'>编辑</view>
+            <view class='del' data-cardId='{{item.id}}' catchtap='delTap'>删除</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+
+  <block wx:if='{{status==2}}'>
+    <view class='content' catchtap='operationTapHid'>
+      <block wx:for='{{finishList}}' wx:key="">
+        <view data-index='{{index}}' style='position:relative;'>
+          <template is='couponList' data='{{...item}}'></template>
+          <view class='editDele {{operation == index ?"":"hidden"}}'>
+            <view class='img'>
+              <image src='/images/triangle.png'></image>
+            </view>
+            <view class='edit' data-cardId='{{item.id}}' catchtap='editTap'>编辑</view>
+            <view class='del' data-cardId='{{item.id}}' catchtap='delTap'>删除</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </block>
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}" bindtap='addTap'>
+    <view class="only_button">添加</view>
+  </view>
+</view>

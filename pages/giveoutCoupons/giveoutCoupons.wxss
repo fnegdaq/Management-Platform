@@ -1,0 +1,79 @@
+.coupons_view {
+  margin-top: 30rpx;
+  margin-bottom: 98rpx;
+}
+
+.empty_view image{
+  height: 380rpx;
+  width: 380rpx;
+  margin-top: 322rpx;
+  margin-left: 185rpx;
+}
+
+.empty_view .empty_title{
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.bottom_view {
+  padding: 0rpx 40rpx;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+}
+
+.bottom_view .sure_button {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  margin-top: 16rpx;
+}
+
+.coupon_card {
+  margin: 25rpx 30rpx;
+  position: relative;
+  background: #fff;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  padding: 30rpx;
+}
+
+.coupon_card radio {
+  margin-right: 10rpx;
+
+}
+
+.coupon_card .info .title {
+  font-size: 32rpx;
+  font-weight: bold;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 560rpx;
+  text-overflow: ellipsis; 
+}
+
+.coupon_card .info .info_1 {
+  font-size: 24rpx;
+  color: #bbb;
+  margin-top: 20rpx;
+} 
+
+.coupon_card .info .info_2 {
+  font-size: 24rpx;
+  color: #bbb;
+  margin-top: 7rpx;
+} 
+
+.info_item {
+  width: 280rpx;
+}

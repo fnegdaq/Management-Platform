@@ -1,0 +1,44 @@
+
+<view class='main'>
+  <view class='sett'>
+    <view class='list name'>
+      <view class='tit'>名称</view>
+       <input placeholder='请输入卡券名称' placeholder-class='colorB' bindinput='bindinput'></input> 
+    </view>
+    <view class='list'>
+      <view class='tit'>数量</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput2'></input>张</view>
+    </view>
+    <view class='list'>
+      <view class='tit'>最低消费金额</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput3'></input>元</view>
+    </view>
+    <view class='list'>
+      <view class='tit'>优惠金额</view>
+      <view class='number'>
+        <input placeholder='0' placeholder-class='colorB' bindinput='bindinput4'></input>元</view>
+    </view>
+    <view class='list listdate' bindtap='dateTap'>
+      <view class='tit'>开放日期</view>
+      <view class='date'>
+        <text wx:if="{{year=='' || year == undefined}}" style='color:#bbbbbb;'>选择日期</text>
+        <text wx:else style='color:#888;'>{{year}}.{{month}}.{{day}}</text>
+        <image src='/images/me_icon_getinto_big.png'></image>
+      </view>
+    </view>
+    <view class='list listdate' bindtap='dateTap2'>
+      <view class='tit'>结束日期</view>
+      <view class='date'>
+        <text wx:if="{{years=='' || years == undefined}}" style='color:#bbbbbb;'>选择日期</text>
+        <text wx:else style='color:#888;'>{{years}}.{{months}}.{{days}}</text>
+        <image src='/images/me_icon_getinto_big.png'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+    <view class="only_button" bindtap="saveTap">保存</view>
+  </view>
+</view>

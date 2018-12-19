@@ -1,0 +1,31 @@
+
+<form bindsubmit="submitLogisticsInfo">
+
+  <view class="select_view flex-row flex-y-center">
+    <view>物流选择</view>
+    <radio-group class="radio-group flex-row" bindchange="radioChange"> 
+      <label class="radio flex-row flex-y-center" wx:for="{{['快递','无需物流']}}" wx:key="unique">
+        <radio value="{{item.value}}" checked="{{item.checked}}" color="#333" /> 
+        <view style="margin-left:10rpx;">{{item}}</view>
+      </label>
+    </radio-group>
+  </view>
+
+  <view class="info_view">
+    <block wx:for="{{cell_list}}" wx:key="unique">
+      <view class="cell{{index==0?'_noline':''}}" style="height: {{index==3?'120':'54'}}rpx;">
+        <view class="flex-grow-0" style="margin-top:10rpx;">{{item.title}}</view>
+        <image src="/images/me_icon_getinto_big.png" mode="aspectFit" wx:if="{{item.title=='快递公司'}}" style="width:25rpx;height:30rpx;margin-top:10rpx;"></image> 
+        <input class="flex-grow-1" name="{{item.name}}" placeholder="{{item.placeholder}}" placeholder-style="color:#bbb;font-weight:normal" wx:if="{{index==1 || index==2}}" style="height: 54rpx;text-align:right ; margin-top:4rpx;"></input>
+        <textarea class="flex-grow-1" wx:if="{{index==3}}" placeholder="{{item.placeholder}}" placeholder-style="color:#bbb;font-weight: normal;" style="height: 100rpx;margin-left:40rpx;margin-top:15rpx; font-weight: normal;"></textarea>
+        <view style="font-weight: normal;color:#bbb;margin-top:80rpx;" wx:if="{{index==3}}"><text style="color:#00a1ee;">0</text>/30</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}} flex-row">
+    <button bindtap="cancel">取消</button>
+    <button form-type="submit" style="margin-left:30rpx;">提交</button>
+  </view>
+
+</form>

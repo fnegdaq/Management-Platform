@@ -1,0 +1,21 @@
+<!--pages/withdrawal/withdrawal.wxml-->
+
+<view class='withdrawal_View'>
+  <view class='topView'></view>
+  <view class='suspension_view_box'>
+    <view class='suspension_view flex-col flex-x-center flex-y-center'>
+    <view class='suspension_view_money'>958.36 <text>元</text></view>
+    <view class='suspension_view_title'>该账户余额</view>
+    </view>
+  </view>
+  <view class='bottomView'>
+    <view class='content flex-row flex-y-center' bindtap='withdrawalTap' data-index="1">
+      <view class='left_content flex-grow-1'>提现记录</view>
+      <image src='/images/me_icon_getinto_big.png' mode='aspectFit' class='arrow'></image>
+    </view>
+    <view class='content_noline flex-row flex-y-center' bindtap='withdrawalTap' data-index="2">
+      <view class='left_content flex-grow-1'>提现</view>
+      <image src='/images/me_icon_getinto_big.png' mode='aspectFit' class='arrow'></image>
+    </view>
+  </view>
+</view>

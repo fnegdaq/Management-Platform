@@ -1,0 +1,37 @@
+<!--pages/statisticsMoneyDetail/statisticsMoneyDetail.wxml-->
+
+<view class='main'>
+  <view class='noRecord' wx:if='{{noRecord==0}}'>
+    <image src='/images/noRecord.png'></image>
+    <text>您暂时还没有记录~</text>
+  </view>
+
+  <view class='recordBox'>
+    <view class='list'>
+      <view class='dateMoney'>
+        <view class='money colorBlue'>+500.00</view>
+        <view class='date'>2018-07-09 11:32:45</view>
+      </view>
+      <view class='detail'>
+        <view class='orderId'>订单编号：62653238545254869854</view>
+        <view class='nameNum'>
+          <view class='name'>春夏女装古力娜扎</view>
+          <view class='num'>x200</view>
+        </view>
+      </view>
+    </view>
+    <view class='list'>
+      <view class='dateMoney'>
+        <view class='money colorOrange'>-800.00</view>
+        <view class='date'>2018-07-09 11:32:45</view>
+      </view>
+      <view class='detail'>
+        <view class='orderId'>订单编号：62653238545254869854</view>
+        <view class='nameNum'>
+          <view class='name'>中袖半袖柔美雪纺衫</view>
+          <view class='num'>x1</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

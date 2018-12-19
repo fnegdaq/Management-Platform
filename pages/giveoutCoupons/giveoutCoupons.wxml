@@ -1,0 +1,32 @@
+
+<view class="coupons_view">
+
+  <radio-group class="radio-group" bindchange="radioChange">
+    <label class="radio" wx:for="{{coupons}}" wx:key="unique">
+      <view class="coupon_card flex-row">
+        <radio value="{{item.value}}" checked="{{item.checked}}" color="#333" style="margin-top:50rpx;"/>
+        <view class="info">
+          <view class="title flex-col ">{{item.name}}</view>
+          <view class="info_1 flex-row">
+            <view class="info_item flex-row">卡券数量：<view style="color:#00aeff;">60</view><text style="color:#888;">/100</text></view>
+            <view class="info_item flex-row">抵消金额：<view style="color:#00aeff;">¥50.00</view></view>
+          </view>
+          <view class="info_2 flex-row">
+            <view class="info_item flex-row">优惠方式：<view style="color:#888;width:150rpx;">满1000元减50元</view></view>
+            <view class="info_item flex-row">有效事件：<view style="color:#888;width:150rpx;">领取7天过期</view></view>
+          </view>
+        </view>
+      </view>
+    </label>
+  </radio-group>
+
+  <view class="bottom_view" wx:if="{{coupons.length!=0}}">
+    <view class="sure_button" bindtap="add_cassify">确定</view>
+  </view>
+
+  <view class="empty_view" wx:if="{{coupons.length==0}}">
+    <image src="/images/icon_classification_empty.png" mode="aspectFit"></image>
+    <view class="empty_title">您暂时还没有卡券</view>
+  </view>
+
+</view>

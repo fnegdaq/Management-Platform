@@ -1,0 +1,58 @@
+.tabBar_box {
+  width: 100%;
+  background: #fff;
+  border-top: 2rpx solid #eee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.tabBar_box navigator {
+  width: 25%;
+  height: 100%;
+}
+
+.tabBar_box .tabBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12rpx 0;
+}
+
+.tabBar_box .tabBar30 {
+  padding: 12rpx 0 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabBar_box .tabBar image ,.tabBar_box .tabBar30 image{
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.tabBar_box .tabBar text {
+  text-align: center;
+  text-indent: 5rpx;
+  font-size: 22rpx;
+  font-weight: bold;
+  color: #afafaf;
+  margin-top: 2rpx;
+}
+
+.tabBar_box .tabBar30 text {
+  text-align: center;
+  text-indent: 2rpx;
+  font-size: 22rpx;
+  font-weight: bold;
+  color: #afafaf;
+  margin-top: 2rpx;
+}
+
+.tabBar .active {
+  color: #00a1ec !important;
+}

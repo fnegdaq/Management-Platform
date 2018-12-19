@@ -1,0 +1,57 @@
+/* pages/seckillDate/seckillDate.wxss *//* pages/seckillSelectDate/seckillSelectDate.wxss */
+
+
+.bottom_view {
+  padding: 0rpx 10rpx;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  background: #fff;
+}
+
+.bottom_view view {
+  background: #00aeff;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 66rpx;
+  height: 66rpx;
+  margin-top: 18rpx;
+  width: 690rpx;
+  margin-left: 30rpx;
+}
+
+.item-view{
+  background-color: #fff;
+  width: 330rpx;
+  height: 80rpx;
+  margin: 30rpx 0 0 30rpx;
+  position: relative;
+  box-shadow: 5rpx 5rpx 15rpx #eee;
+}
+
+.view{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.item-text{
+  font-size: 28rpx;
+  color: #333;
+  line-height: 80rpx;
+  margin-left: 30rpx;
+}
+
+.item-img{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  right: 10rpx;
+  top:15rpx;
+  
+}

@@ -1,0 +1,66 @@
+<include src="../../components/tabBar/tabBar" />
+
+<view class="container">
+
+  <!-- 用户信息 -->
+  <navigator url="/pages/personalData/personalData" class="user_info flex-row flex-y-center">
+    <image src="" class="avatar"></image>
+    <view class="head_inof flex-col flex-grow-1">
+      <view class="phone_num">12326305308</view>
+      <view class="data">店铺有效期至:2018-11-12</view>
+    </view>
+    <image src="/images/me_icon_getinto_small.png" class="arrow" mode="aspectFit"></image>
+  </navigator>
+
+  <!-- 主要功能按键 -->
+  <view class="func_view">
+    <view class="cell_view flex-row flex-y-center" bindtap="tapCell" data-index="1">
+      <image src="/images/me_icon_capital.png" mode="aspectFit"></image>
+      <view class="func_title flex-grow-1">资金提现</view>
+      <view class="func_des_price">92.48元</view>
+      <image src="/images/me_icon_getinto_big.png" class="arrow" mode="aspectFit"></image>
+      <view></view>
+    </view>
+    <view class="cell_view flex-row flex-y-center" bindtap="tapCell" data-index="2">
+      <image src="/images/me_icon_shop.png" mode="aspectFit"></image>
+      <view class="func_title flex-grow-1">全部店铺</view>
+      <view class="func_des">切换店铺</view>
+      <image src="/images/me_icon_getinto_big.png" class="arrow" mode="aspectFit"></image>
+    </view>
+    <view class="cell_view flex-row flex-y-center" bindtap="tapCell" data-index="3">
+      <image src="/images/me_icon_share.png" mode="aspectFit"></image>
+      <view class="func_title flex-grow-1">分享店铺</view>
+      <image src="/images/me_icon_getinto_big.png" class="arrow" mode="aspectFit"></image>
+    </view>
+    <view class="cell_view_noline flex-row flex-y-center" bindtap="tapCell" data-index="4">
+      <image src="/images/me_icon_qrcode.png" mode="aspectFit"></image>
+      <view class="func_title flex-grow-1">我的二维码</view>
+      <view class="func_des">立即上传</view>
+      <image src="/images/me_icon_getinto_big.png" class="arrow" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class="share_view" wx:if="{{isShowShareView == true}}">
+  <view class="black_view" bindtap="tapShare_blackArea"></view>
+  <view class="share_func flex-row">
+    <view class="wx_friend flex-grow-1 flex-col flex-y-center" bindtap="tapShareButton" data-type="wx_friend">
+      <image src="/images/me_icon_wechat.png"></image>
+      <view>微信好友</view>
+    </view>
+    <view class="wx_friend flex-grow-1 flex-col flex-y-center" bindtap="tapShareButton" data-type="wx_circle">
+      <image src="/images/me_icon_friends.png"></image>
+      <view>朋友圈</view>
+    </view>
+  </view>
+</view>
+
+<!-- 我的二维码 -->
+<view class="qrcode_view flex-y-center flex-x-center" wx:if="{{isShowQRCodeView == true}}">
+  <view class="black_view" bindtap="tapShare_blackArea"></view>
+  <view class="qrcode flex-col flex-y-center">
+    <image src="/images/me_icon_qrcode.png"></image>
+    <view class="upload" bindtap="uploadQRCode">更新上传</view>
+  </view>
+</view>

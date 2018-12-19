@@ -1,0 +1,30 @@
+
+<view class="top_view">
+  <text wx:if="{{parent_name!='无'}}">{{parent_name}}</text><image wx:if="{{parent_name!='无'}}" src="/images/me_icon_getinto_big.png" style="width:25rpx;height:18rpx;padding-top:10rpx;margin:0rpx 10rpx;" mode="aspectFit"></image><text style='color:#00aeff'>一级分类</text>
+</view>
+
+<view class="addClassification_view">
+  <view >父类分类</view>
+  <view class="parent_title">{{parent_name}}
+    <image src="/images/icon-arrow-down.png" mode="aspectFit" bindtap="showParentClassify"></image>
+  </view>
+
+  <view class="menu" style="height:{{92*classification_list.length}}rpx;" wx:if="{{showMenu}}">
+    <image src="/images/icon_triangle_up.png" mode="aspectFit"></image>
+    <block wx:for="{{classification_list}}" wx:key="unique">
+      <view class="menu_item{{index==0?'_noline':''}}" bindtap="selectSuperClass" data-name="{{item}}">{{item}}</view>
+    </block>
+  </view>
+
+  <view class="title">添加商品类别图片<text>建议上传100 x 100像素，不超过500kb</text></view>
+  <image class="pic" src="{{tempFilePaths}}" bindtap="choosePic">
+    <image class="add_pic" src="/images/icon_add_pic.png" wx:if="{{tempFilePaths.length==0}}"></image>
+  </image>
+  <image class="delete_pic" src="/images/icon_delete_pic.png" wx:if="{{tempFilePaths.length!=0}}" bindtap='deletePic'></image>
+  <view class="title" style="margin-top:45rpx">分类名称</view>
+  <input placeholder="请输入分类名称" placeholder-class="placeText" bindinput="inputName"></input>
+</view>
+
+<view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+  <view class="only_button" bindtap="save">保存</view>
+</view>

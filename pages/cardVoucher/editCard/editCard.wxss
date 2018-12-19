@@ -1,0 +1,87 @@
+/* pages/cardAdd/cardAdd.wxss */
+.colorB{
+  color:#bbbbbb;
+}
+
+.main{
+  width:100%;
+  background:#fff;
+  box-shadow:0 10rpx 10rpx -10rpx rgba(0,0,0,0.3);
+}
+
+.sett{
+  padding:0 25rpx;
+}
+
+.sett .list{
+  padding:24rpx 0;
+  border-bottom:2rpx solid #eee;
+  font-size:28rpx;
+  font-weight:bold;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.sett .listdate{
+  padding:30rpx 0;
+}
+
+.sett .list:last-child{
+  border-bottom:none;
+}
+
+.sett .list .tit{
+  color:#333;
+}
+
+.sett .name input{
+  color:#888;
+  text-align:right;
+}
+
+.sett .list .date image{
+  width:13rpx;
+  height:24rpx;
+  margin-left:20rpx;
+}
+
+.number{
+  display:flex;
+  align-items:center;
+}
+
+.number input{
+  color:#888;
+  text-align:right;
+  margin-right:10rpx;
+}
+
+.save{
+  width:100%; 
+  height:98rpx;
+  background:#fff;
+  border-top:2rpx solid #eee;
+  padding:0 40rpx;
+   position:fixed;
+  bottom:0;
+  left:0; 
+}
+
+.save view{
+  width:670rpx; 
+  height:66rpx; 
+  background:#00aeff;
+  font-size:32rpx;
+  color:#fff;
+  text-align:center;
+  line-height:66rpx;
+  border-radius:18rpx;
+  margin-top:18rpx;
+}
+.show{
+  display:block;
+}
+.hidden{
+  display:none;
+}

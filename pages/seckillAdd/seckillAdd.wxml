@@ -1,0 +1,60 @@
+<!--pages/seckillAdd/seckillAdd.wxml-->
+
+<view class='top_view' style='height:630rpx;background-color: white;position: relative;'>
+
+  <view class='item_view' bindtap='goToSelectedGoods'>
+    <text class='item_text'>选择商品</text>
+    <text class='item_name'>选择商品选择商品选择商品选择商品选择商品选择商品</text>
+    <image class='item_arrow' src='../../images/me_icon_getinto_big.png'></image>
+  </view>
+
+  <view class='item_view'>
+    <text class='item_text'>售价</text>
+    <input placeholder="0" class='input item_text' placeholder-class='input item_text' />
+    <text class='item_text yuan'>元</text>
+  </view>
+
+  <view class='item_view'>
+    <text class='item_text'>秒杀价</text>
+    <input placeholder="0" class='input item_text' placeholder-class='input item_text' />
+    <text class='item_text yuan'>元</text>
+  </view>
+
+  <view class='item_view'>
+    <text class='item_text'>秒杀数量</text>
+    <input placeholder="0" class='input item_text' placeholder-class='input item_text' />
+    <text class='item_text yuan'>件</text>
+  </view>
+
+  <view class='item_view' >
+    <text class='item_text'>限购数量</text>
+    <image class='item_select' src="{{purchaseLimit?'../../images/icon_selected.png':'../../images/icon_unselected.png'}}" bindtap='changePurchaseLimit'></image>
+    <text class='item_text' style='margin-left: 216rpx;' bindtap='changePurchaseLimit'>不限购</text>
+    <input placeholder="0" value='{{purchaseLimitCount}}' class='input item_text' placeholder-class='input item_text' disabled='{{purchaseLimit}}' />
+    <text class='item_text yuan'>件</text>
+  </view>
+
+  <view class='item_view'>
+    <text class='item_text'>选择日期</text>
+    <text class='item_name' bindtap='goToDate'>选择商品选择商品选择商品选择商品选择商品选择商品</text>
+    <image class='item_arrow' src='../../images/me_icon_getinto_big.png'></image>
+  </view>
+
+  <view class='item_view' style='border-bottom: 0rpx solid #eee;'>
+    <text class='item_text'>选择时间</text>
+    <text class='item_name' bindtap='goToSelectTime'>选择商品选择商品选择商品选择商品选择商品选择商品</text>
+    <image class='item_arrow' src='../../images/me_icon_getinto_big.png' ></image>
+  </view>
+
+</view>
+
+
+
+<view class="bottom_view{{windowHeight=='724'?'_iphoneX':''}}">
+  <view class="only_button" bindtap="saveProduct">保存</view>
+</view>
+<!--
+
+
+
+-->

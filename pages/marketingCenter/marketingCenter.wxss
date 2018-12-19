@@ -1,0 +1,41 @@
+@import "../../components/funcButton/funcButton.wxss";
+@import "../../components/tabBar/tabBar.wxss";
+
+.container {
+  padding-top: 15rpx;
+}
+
+.container .func_title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #24303c;
+  margin: 40rpx 30rpx 0 30rpx;
+}
+
+.container .spell_manage  {
+  margin-top: 20rpx;
+}
+
+.image2 {
+  margin-left: 6rpx;
+  width: 162rpx;
+  height: 100rpx;
+  background-color:rgba(0,0,0,0.1);
+  box-shadow: 2rpx 2rpx 30rpx #ddd;
+}
+
+.image1 {
+  margin-left: 30rpx;
+  width: 162rpx;
+  height: 100rpx;
+  background-color:rgba(0,0,0,0.1);
+  box-shadow: 2rpx 2rpx 30rpx #ddd;
+}
+
+.container .sec_manage .func_title {
+  margin-bottom: 20rpx;
+}
+
+.func_button {
+  margin-left: 30rpx;
+}

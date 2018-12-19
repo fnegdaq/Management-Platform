@@ -1,0 +1,119 @@
+
+.classification_view .empty_view image{
+  height: 380rpx;
+  width: 380rpx;
+  margin-top: 322rpx;
+}
+
+.classification_view .empty_view .empty_title{
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.classification_view {
+  padding-bottom: 98rpx;
+}
+
+.classification_view .classification_card {
+  padding: 30rpx 30rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  box-shadow: 5rpx 5rpx 30rpx #eee;
+  position: relative;
+  margin: 30rpx 30rpx;
+}
+
+.classification_view .classification_card image{
+  height: 180rpx;
+  width: 180rpx;
+}
+
+.classification_view .classification_card .info {
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.classification_view .classification_card .info .title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.classification_view .classification_card .info .number {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 14rpx;
+}
+
+.classification_view .classification_card .info image {
+  height: 30rpx;
+  width: 60rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.classification_card .menu {
+  background-color:rgba(0,0,0,0.7) ;
+  height: 184rpx;
+  width: 150rpx;
+  color: #fff;
+  font-size: 26rpx;
+  font-weight: bold;
+  position: absolute;
+  line-height: 92rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  right: 25rpx;
+  top: 235rpx;
+  z-index: 50;
+}
+
+.classification_card .menu::before {
+  content: "";
+  width: 100%;
+  height: 2rpx;
+  position: absolute; 
+  left: 0;
+  top: 92rpx;
+  background-color: #737373;
+}
+
+.classification_card .menu image{
+  height: 25rpx;
+  width: 30rpx;
+  margin-top: -12rpx;
+  margin-left: 100rpx;
+}
+
+.classification_view .top_view {
+  height: 80rpx;
+  background: #fff;
+  padding: 0 30rpx;
+  font-size: 24rpx;
+  position: relative;
+  box-shadow: 5rpx 5rpx 20rpx #eee;
+}
+
+.classification_view .top_view image {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.classification_view .top_view text {
+  margin: 10rpx;
+  color: #333;
+}
+
+.classification_view .top_view .number {
+  position: absolute;
+  right: 30rpx;
+  color: #bbb;
+}
+
+.classification_view .top_view .number text{
+  color: #888;
+}
